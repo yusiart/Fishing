@@ -16,11 +16,13 @@
           <e p="FishMover.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
           <e p="Hook.cs" t="Include" />
+          <e p="HookView.cs" t="Include" />
           <e p="Menu.cs" t="Include" />
           <e p="MoneyDisplay.cs" t="Include" />
           <e p="ObjectPool.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="Rod.cs" t="Include" />
+          <e p="Shop.cs" t="Include" />
           <e p="Spawner.cs" t="Include" />
         </e>
       </e>
