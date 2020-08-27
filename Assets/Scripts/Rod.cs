@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Rod : MonoBehaviour
 {
-    [SerializeField] private Hook _hook;
+    [SerializeField] private HookMover _hook;
     [SerializeField] private int _depth;
     
     private bool _isShooting;

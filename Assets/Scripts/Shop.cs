@@ -9,7 +9,7 @@ public class Shop : MonoBehaviour
     [SerializeField] private GameObject _container;
     [SerializeField] private HookView _template;
     [SerializeField] private Player _player;
-
+    
 
     private void Start()
     {
@@ -25,4 +25,12 @@ public class Shop : MonoBehaviour
         
         item.Render(hook);
     }
+
+    // public void TryToBuyHook()
+    // {
+    //     if (_player.Money > )
+    //     {
+    //         
+    //     }
+    // }
 }

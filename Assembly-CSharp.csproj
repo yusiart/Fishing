@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\FishesCollector.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Hook.cs" />
+     <Compile Include="Assets\Scripts\HookMover.cs" />
      <Compile Include="Assets\Scripts\HookView.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\MoneyDisplay.cs" />

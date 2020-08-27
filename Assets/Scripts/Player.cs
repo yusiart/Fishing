@@ -7,8 +7,12 @@ using UnityEngine.Events;
 public class Player : MonoBehaviour
 {
    [SerializeField] private float _speed;
-   [SerializeField] private Hook _hook;
    [SerializeField] private int _money;
+
+   public int Money
+   {
+      get => _money;
+   }
 
    public event UnityAction<int> OnMoneyChanged;
 
