@@ -2,20 +2,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Bag : MonoBehaviour
 {
   private int _capacity;
   private List<Fish> _fishes = new List<Fish>();
+  
+  public UnityAction <int, int>  OnFishesCountChanged;
 
   public List<Fish> Fishes
   {
     get => _fishes;
   }
-
   public void UpdateFishesBag(int capacity)
   {
     _capacity = capacity;
+    OnFishesCountChanged?.Invoke(_fishes.Count, _capacity);
   }
 
   public bool TryToAddFish(Fish fish)
@@ -24,6 +27,7 @@ public class Bag : MonoBehaviour
     {
       _fishes.Add(fish);
       fish.transform.SetParent(this.transform);
+      OnFishesCountChanged?.Invoke(_fishes.Count, _capacity);
       return true;
     }
 
@@ -42,6 +46,7 @@ public class Bag : MonoBehaviour
         fish.enabled = false;
       }
       _fishes = new List<Fish>();
+      OnFishesCountChanged?.Invoke(_fishes.Count, _capacity);
     }
   }
 }

@@ -11,10 +11,13 @@
           <e p="Bag.cs" t="Include" />
           <e p="CameraMover.cs" t="Include" />
           <e p="Fish.cs" t="Include" />
+          <e p="FishCountDisplay.cs" t="Include" />
           <e p="FishesCollector.cs" t="Include" />
           <e p="FishMover.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
           <e p="Hook.cs" t="Include" />
+          <e p="Menu.cs" t="Include" />
+          <e p="MoneyDisplay.cs" t="Include" />
           <e p="ObjectPool.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="Rod.cs" t="Include" />

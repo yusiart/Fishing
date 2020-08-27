@@ -61,10 +61,13 @@
      <Compile Include="Assets\Scripts\Bag.cs" />
      <Compile Include="Assets\Scripts\CameraMover.cs" />
      <Compile Include="Assets\Scripts\Fish.cs" />
+     <Compile Include="Assets\Scripts\FishCountDisplay.cs" />
      <Compile Include="Assets\Scripts\FishMover.cs" />
      <Compile Include="Assets\Scripts\FishesCollector.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Hook.cs" />
+     <Compile Include="Assets\Scripts\Menu.cs" />
+     <Compile Include="Assets\Scripts\MoneyDisplay.cs" />
      <Compile Include="Assets\Scripts\ObjectPool.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Rod.cs" />
