@@ -6,7 +6,6 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
-   [SerializeField] private float _speed;
    [SerializeField] private int _money;
 
    public int Money
@@ -28,5 +27,12 @@ public class Player : MonoBehaviour
          _money += fish.Reward;
          OnMoneyChanged?.Invoke(_money);
       }
+   }
+
+   public void BuyHook(Hook hook)
+   {
+      _money -= hook.Price;
+      OnMoneyChanged?.Invoke(_money);
+      hook.Buy();
    }
 }

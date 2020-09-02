@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-   [SerializeField] private ObjectPool _objectPool;
+   [SerializeField] private Rod _rod;
 
-
-   private void OffAllFishes()
+   public void OnChangeButtonClick()
    {
-      _objectPool.OffFishes();
+      _rod.SetHook();
    }
 }

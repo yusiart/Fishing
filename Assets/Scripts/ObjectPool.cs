@@ -26,12 +26,4 @@ public class ObjectPool : MonoBehaviour
       result = pool.FirstOrDefault(fish => fish.activeSelf == false);
       return result != null;
    }
-
-   public void OffFishes()
-   {
-      foreach (var fish in pool)
-      {
-         fish.SetActive(false);
-      }
-   }
 }

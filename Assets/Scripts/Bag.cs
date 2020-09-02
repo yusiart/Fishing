@@ -6,15 +6,24 @@ using UnityEngine.Events;
 
 public class Bag : MonoBehaviour
 {
+  [SerializeField] private HookMover _hook;
+  [SerializeField] private FishCountDisplay _fishDisplay;
+  
   private int _capacity;
   private List<Fish> _fishes = new List<Fish>();
   
   public UnityAction <int, int>  OnFishesCountChanged;
 
-  public List<Fish> Fishes
+  private void OnEnable()
   {
-    get => _fishes;
+    _fishDisplay.GetBag(this);
   }
+
+  private void OnDisable()
+  {
+    _fishDisplay.ResetBag(this);
+  }
+
   public void UpdateFishesBag(int capacity)
   {
     _capacity = capacity;
@@ -28,6 +37,12 @@ public class Bag : MonoBehaviour
       _fishes.Add(fish);
       fish.transform.SetParent(this.transform);
       OnFishesCountChanged?.Invoke(_fishes.Count, _capacity);
+      
+      if (_fishes.Count == _capacity)
+      {
+        _hook.Accelerate();
+      }
+      
       return true;
     }
 
@@ -40,11 +55,9 @@ public class Bag : MonoBehaviour
     {
       foreach (var fish in _fishes)
       {
-        player.SellFish(fish);
-        fish.transform.SetParent(null);
-        fish.ResetFish();
-        fish.enabled = false;
+        fish.SellFish(player);
       }
+      
       _fishes = new List<Fish>();
       OnFishesCountChanged?.Invoke(_fishes.Count, _capacity);
     }

@@ -2,21 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1d711fb-cf99-4c82-b9a3-54a1f0b7c24e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SeaFishing/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeaFishing/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/12/12f9ce52ba4ce0dfb23bf504b12d7a5a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/23/23d778cc93b6077b267c68c09e104efb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/3c/3cffd57101a846fd1225504acdee03e8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/54/543ca679cdcf58a9d91e6b0e33ad965a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/86/8633a23b3e1b33aa65db6889eef731c4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/b6/b602797b0fcdea6f7780f43f3aeef970" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/bc/bcd6e2d65c8ba94031cebed6e1dc9f07" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/c0/c0841574b96d8d1bba48683040b2ecb9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/c7/c7085f4bf424832455bdd8c04d0a3a33" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/cf/cf8584571afd54402b593f17257a3ec9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/d2/d24d232cd180bc9221fd55f7e9a97c07" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/ef/ef9889fee8439ac1aca3df1a454a64b8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/f7/f75f089767d04faf8502785d2d711cec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Artifacts/fa/fa28d1b47298a48a20a3d980015aadf8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-54d33ba82fd82413996c1ca89a47892c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-559584ec9f73c4a79866bc62e3fc26fa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-7c933c8584c144f9d90e03540eee41f5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-852fbc7f9c59b43d39b6b5e69597188d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-96660ae2d0a204033a00f39af4eb8d00" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-ef1ba70e10cab4202b6e22fc887cca6d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-f8fa81fb36849466a9fe1d4143f36e9e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-fa1af6d286b41408895f6fd90edd45b9" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SeaFishing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeaFishing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Hook.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Hook.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Image.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Image.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fish.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FishCountDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FishCountDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FishMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FishMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FishesCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FishesCollector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HookMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HookMover.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HookView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HookView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectPool.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rod.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rod.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/25412a-4ed746cd4cb9646ad8.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/25412a-4ed746cd4cb9646ad8.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/25412a-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/25412a-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/4f3b57-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/4f3b57-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
@@ -64,28 +97,28 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HookRaicast.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HookDrawer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Hook2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Hook1.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FishMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Fish1.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Collector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Fish.cs" />
         <option value="$USER_HOME$/Downloads/The Fish Master/Assets/Scripts/Hook/Hook.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MoneyDisplay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjectPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HookView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FishMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FishesCollector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Fish.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FishCountDisplay.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bag.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FishesCollector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MoneyDisplay.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Shop.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HookView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Rod.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Menu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Hook.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HookMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Hook.cs" />
       </list>
     </option>
   </component>
@@ -130,7 +163,7 @@
       <updated>1596621860256</updated>
       <workItem from="1596621875058" duration="14194000" />
       <workItem from="1596871426335" duration="47016000" />
-      <workItem from="1598287307759" duration="15953000" />
+      <workItem from="1598287307759" duration="44137000" />
     </task>
     <servers />
   </component>

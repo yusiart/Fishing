@@ -10,9 +10,9 @@ public class FishesCollector : MonoBehaviour
     private bool _isFishing = false;
     
 
-    public void StartFishing(bool startFishing)
+    public void ChangeIsFishing(bool isFishing)
     {
-        _isFishing = startFishing;
+        _isFishing = isFishing;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

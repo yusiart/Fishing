@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Security;
 using UnityEngine;
 
 public class CameraMover : MonoBehaviour
 { 
-    [SerializeField] private Transform _hook;
+    [SerializeField] private Hook _hook;
     [SerializeField]private Vector2 _offset = new Vector2(0, 1f);
     [SerializeField]private float _damping = 1.5f;
 
@@ -13,9 +16,17 @@ public class CameraMover : MonoBehaviour
         _offset = new Vector2(Mathf.Abs(_offset.x), _offset.y);
     }
 
-    void Update () 
+    void Update()
     {
-        Vector3 target = new Vector3(0, _hook.position.y + _offset.y, transform.position.z);
-        transform.position = Vector3.Lerp(transform.position, target, _damping * Time.deltaTime);
+        if (_hook != null)
+        {
+            Vector3 target = new Vector3(0, _hook.transform.position.y + _offset.y, transform.position.z);
+            transform.position = Vector3.Lerp(transform.position, target, _damping * Time.deltaTime);
+        }
+    }
+
+    public void GetObject(Hook hook)
+    {
+        _hook = hook;
     }
 }

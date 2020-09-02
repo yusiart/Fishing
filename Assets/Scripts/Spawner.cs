@@ -7,7 +7,7 @@ using Random = Unity.Mathematics.Random;
 public class Spawner : ObjectPool
 {
    [SerializeField] private List<GameObject> _prefabs;
-   [SerializeField] private Transform _hook;
+   //[SerializeField] private Transform _hook;
    [SerializeField] private Transform [] _spawnPoints;
    
     Random _random = new Random();

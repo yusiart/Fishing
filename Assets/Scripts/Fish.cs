@@ -7,10 +7,11 @@ public class Fish : MonoBehaviour
 {
     [SerializeField] private int _reward;
     public int Reward => _reward;
-    
 
-    public void ResetFish()
+    public void SellFish(Player player)
     {
-        
+        player.SellFish(this);
+        transform.SetParent(null);
+        gameObject.SetActive(false);
     }
 }

@@ -1,21 +1,27 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class Hook : MonoBehaviour
 {
    [SerializeField] private int _capacity;
-   [SerializeField] private bool _isBuyed = false;
+   [SerializeField] private bool _isBuyed;
    [SerializeField] private int _price;
    [SerializeField] private string _name;
-   [SerializeField] private Image _icon;
+   [SerializeField] private Sprite _icon;
+
+   private SpriteRenderer _renderer;
 
    public string Name => _name;
    public int Price => _price;
    public bool IsBuyed => _isBuyed;
-   public Image Icon => _icon;
+   public Sprite Icon => _icon;
 
-   public int Capacity => _capacity;
+   public void Buy()
+   {
+      _isBuyed = true;
+   }
+
+   public void SetCapacity(Bag bag)
+   {
+      bag.UpdateFishesBag(_capacity);
+   }
 }

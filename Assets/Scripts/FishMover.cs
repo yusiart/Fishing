@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -23,7 +24,12 @@ public class FishMover : MonoBehaviour
     _rangeSpread = Random.Range(2, 5);
     _direction = new Vector2(transform.position.x + _axialMovement, 0);
   }
-  
+
+  private void OnDisable()
+  {
+    transform.Rotate(0,0,-90);
+  }
+
   private void Update()
   {
     if (!_isItCatched)

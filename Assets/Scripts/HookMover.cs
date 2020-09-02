@@ -11,12 +11,14 @@ public class HookMover : MonoBehaviour
     [SerializeField] private Bag _bag;
     [SerializeField] private Player _player;
     [SerializeField] private Hook _hook;
+    [SerializeField] private float _depth;
 
     private Vector3 _target;
     private LineRenderer _lineRenderer;
     private bool _retracting;
-    private int _capacity;
-    
+    private bool _canMove;
+    private float _accelerationCount = 2;
+
     private void Start()
     {
         _lineRenderer = GetComponent<LineRenderer>();
@@ -25,15 +27,16 @@ public class HookMover : MonoBehaviour
     
     private void OnEnable()
     {
-        _capacity = _hook.Capacity;
-        _collector.StartFishing(false);
+        _hook.SetCapacity(_bag);
+        _collector.ChangeIsFishing(false);
     }
     
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, _target, _speed * Time.deltaTime);
-        _lineRenderer.SetPosition(0, _origin.position);
-        _lineRenderer.SetPosition(1, transform.position);
+        if (_canMove)
+        {
+            Move();
+        }
 
         if (_retracting)
             MousePositionFollow();
@@ -42,17 +45,24 @@ public class HookMover : MonoBehaviour
         {
             StartFishing();
         }
-        else if ((_origin.position.y - transform.position.y) < 0.8f && _retracting)
+        else if ((_origin.position.y - transform.position.y) < 0.3f && _retracting)
         {
             EndFishing();
         }
     }
-   
+
+    private void Move()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, _target, _speed * Time.deltaTime);
+        _lineRenderer.SetPosition(0, _origin.position);
+        _lineRenderer.SetPosition(1, transform.position);
+    }
+
     private void StartFishing()
     {
-        _bag.UpdateFishesBag(_capacity);
-        _collector.StartFishing(true);
+        _collector.ChangeIsFishing(true);
         _retracting = true;
+        ResetSpeed();
     }
 
     private void EndFishing()
@@ -60,7 +70,10 @@ public class HookMover : MonoBehaviour
         _retracting = false;
         _bag.TryToSellFishes(_player);
         _rod.Reload();
-        gameObject.SetActive(false);
+        _collector.ChangeIsFishing(false);
+        _canMove = false;
+        ResetSpeed();
+
     }
 
     private void MousePositionFollow()
@@ -72,8 +85,21 @@ public class HookMover : MonoBehaviour
         _target = new Vector3(0f, _origin.transform.position.y, 0f);
     }
 
-    public void SetTarget(Vector3 pos)
+    public void SetTarget()
     {
-        _target = pos;
+        Vector2 down = new Vector2(0, _depth);
+        _target = down;
+        _canMove = true;
+        Accelerate();
+    }
+
+    public void Accelerate()
+    {
+        _speed *= _accelerationCount;
+    }
+
+    public void ResetSpeed()
+    {
+        _speed /= _accelerationCount;
     }
 }
