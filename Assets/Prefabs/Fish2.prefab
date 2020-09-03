@@ -204,9 +204,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5493f149bc65b4d59b5a02769d7fef68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isRightSide: 0
+  _isRightSide: 1
   _moveY: 0.1
-  _moveRangeY: 0.5
+  _moveRangeY: 0.8
   _speed: 2
 --- !u!114 &5935202076716367069
 MonoBehaviour:
@@ -221,4 +221,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _reward: 5
-  _pool: {fileID: 0}

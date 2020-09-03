@@ -6,10 +6,13 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-   [SerializeField] private Rod _rod;
+    [SerializeField] private Rod _rod;
 
-   public void OnChangeButtonClick()
-   {
-      _rod.SetHook();
-   }
+    public void OnChangeHookButtonClick()
+    {
+        if (_rod.IsShooting == false)
+        {
+            _rod.SetHook();
+        }
+    }
 }

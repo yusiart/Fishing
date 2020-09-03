@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Rod : MonoBehaviour
 {
@@ -12,9 +13,12 @@ public class Rod : MonoBehaviour
     [SerializeField] private Hook _currentHook;
     [SerializeField] private Transform _origin;
     [SerializeField] private CameraMover _camera;
+    [SerializeField] private List<Button> _buttons;
     
     private bool _isShooting;
     int i = 0;
+
+    public bool IsShooting => _isShooting;
 
     private void Start()
     {
@@ -45,6 +49,7 @@ public class Rod : MonoBehaviour
     {
         if (hook != null)
         {
+            ResetButtons(false);
             SetActiveeHook();
             _isShooting = true;
             hook.GetComponent<HookMover>().SetTarget();
@@ -63,6 +68,7 @@ public class Rod : MonoBehaviour
 
     public void Reload()
     {
+        ResetButtons(true);
         _isShooting = false;
     }
 
@@ -89,5 +95,13 @@ public class Rod : MonoBehaviour
         _currentHook = _hooks[i];
         _camera.GetObject(_currentHook);
         SetActiveeHook();
+    }
+
+    private void ResetButtons(bool value)
+    {
+        foreach (var button in _buttons)
+        {
+            button.gameObject.SetActive(value);
+        }
     }
 }

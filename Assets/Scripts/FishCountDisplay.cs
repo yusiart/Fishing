@@ -10,16 +10,6 @@ public class FishCountDisplay : MonoBehaviour
     
     private Bag _bag;
     
-    private void OnEnable()
-    {
-        _bag.OnFishesCountChanged += OnCountChanged;
-    }
-
-    private void OnDisable()
-    {
-        _bag.OnFishesCountChanged -= OnCountChanged;
-    }
-
     private void OnCountChanged(int fishesCount, int capacity)
     {
         _catchedFishes.text = fishesCount + " / " + capacity;

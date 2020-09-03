@@ -5,11 +5,9 @@ using UnityEngine;
 public class HookMover : MonoBehaviour
 {
     [SerializeField] private Transform _origin;
-    [SerializeField] private float _speed;
+    [SerializeField] private float _startSpeed;
     [SerializeField] private FishesCollector _collector;
     [SerializeField] private Rod _rod;
-    [SerializeField] private Bag _bag;
-    [SerializeField] private Player _player;
     [SerializeField] private Hook _hook;
     [SerializeField] private float _depth;
 
@@ -18,6 +16,7 @@ public class HookMover : MonoBehaviour
     private bool _retracting;
     private bool _canMove;
     private float _accelerationCount = 2;
+    private float _currentSpeed;
 
     private void Start()
     {
@@ -27,7 +26,7 @@ public class HookMover : MonoBehaviour
     
     private void OnEnable()
     {
-        _hook.SetCapacity(_bag);
+        _currentSpeed = _startSpeed;
         _collector.ChangeIsFishing(false);
     }
     
@@ -53,27 +52,29 @@ public class HookMover : MonoBehaviour
 
     private void Move()
     {
-        transform.position = Vector3.MoveTowards(transform.position, _target, _speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, _target, _currentSpeed * Time.deltaTime);
         _lineRenderer.SetPosition(0, _origin.position);
         _lineRenderer.SetPosition(1, transform.position);
     }
 
     private void StartFishing()
     {
-        _collector.ChangeIsFishing(true);
-        _retracting = true;
-        ResetSpeed();
+        ChangeFishingValues(true);
     }
 
     private void EndFishing()
     {
-        _retracting = false;
-        _bag.TryToSellFishes(_player);
+        _hook.TryToSellFishes();
         _rod.Reload();
-        _collector.ChangeIsFishing(false);
         _canMove = false;
-        ResetSpeed();
+        ChangeFishingValues(false);
+    }
 
+    private void ChangeFishingValues(bool value)
+    {
+        _collector.ChangeIsFishing(value);
+        _retracting = value;
+        ResetSpeed();
     }
 
     private void MousePositionFollow()
@@ -95,11 +96,11 @@ public class HookMover : MonoBehaviour
 
     public void Accelerate()
     {
-        _speed *= _accelerationCount;
+        _currentSpeed *= _accelerationCount;
     }
 
     public void ResetSpeed()
     {
-        _speed /= _accelerationCount;
+        _currentSpeed = _startSpeed;
     }
 }

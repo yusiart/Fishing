@@ -17,6 +17,7 @@ public class Bag : MonoBehaviour
   private void OnEnable()
   {
     _fishDisplay.GetBag(this);
+    OnFishesCountChanged?.Invoke(_fishes.Count, _capacity);
   }
 
   private void OnDisable()
