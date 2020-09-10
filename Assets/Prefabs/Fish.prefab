@@ -204,10 +204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5493f149bc65b4d59b5a02769d7fef68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isRightSide: 1
-  _moveY: 0.1
   _moveRangeY: 0.7
-  _speed: 2
+  _speed: 1
 --- !u!114 &-2858665481145531385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,3 +219,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _reward: 100
+  _pool: {fileID: 0}

@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
-using Random = Unity.Mathematics.Random;
+using Random = UnityEngine.Random;
 
 public class Spawner : ObjectPool
 {
    [SerializeField] private List<GameObject> _prefabs;
-   //[SerializeField] private Transform _hook;
-   [SerializeField] private Transform [] _spawnPoints;
+   [SerializeField] private GameObject _spawnPointsContainer;
+   [SerializeField] private List<Transform> _spawnPoints;
    
-    Random _random = new Random();
+   private int _currentPoint;
+
    private void Start()
    {
+      GetSpawnPoints();
+      
       foreach (var prefab in _prefabs)
       {
          Initialize(prefab);
@@ -21,11 +25,10 @@ public class Spawner : ObjectPool
 
    private void Update()
    {
-      //int spawnPointNumber = _random.NextInt(0, _spawnPoints.Length);
-         
       if (TryGetObject(out GameObject fish))
       {
-         SetEnemy(fish,_spawnPoints[0].position);
+         _currentPoint = Random.Range(0, _spawnPoints.Count);
+         SetEnemy(fish,_spawnPoints[_currentPoint].position);
       }
    }
 
@@ -33,5 +36,13 @@ public class Spawner : ObjectPool
    {
       prefab.transform.position = spawnPoint;
       prefab.SetActive(true);
+   }
+
+   private void GetSpawnPoints()
+   {
+      foreach (Transform child in _spawnPointsContainer.transform)
+      {
+         _spawnPoints.Add(child);
+      }
    }
 }
