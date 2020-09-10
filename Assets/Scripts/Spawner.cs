@@ -36,6 +36,7 @@ public class Spawner : ObjectPool
    {
       prefab.transform.position = spawnPoint;
       prefab.SetActive(true);
+      prefab.GetComponent<FishMover>().SetTransform(transform);
    }
 
    private void GetSpawnPoints()
