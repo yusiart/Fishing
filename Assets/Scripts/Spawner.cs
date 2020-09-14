@@ -46,4 +46,20 @@ public class Spawner : ObjectPool
          _spawnPoints.Add(child);
       }
    }
+
+   public void SetPrefabs(List<GameObject> prefabs)
+   {
+      foreach (var fish in prefabs)
+      {
+         _prefabs.Add(fish); 
+      }
+   }
+   
+   private void OnTriggerEnter2D(Collider2D other)
+   {
+      if (other.gameObject.TryGetComponent<Hook>(out Hook hook))
+      {
+         this.gameObject.SetActive(true);
+      }
+   }
 }

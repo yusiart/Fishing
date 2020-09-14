@@ -16,14 +16,14 @@ public class Rod : MonoBehaviour
     [SerializeField] private List<Button> _buttons;
     
     private bool _isShooting;
-    int i = 0;
+    int i;
 
     public bool IsShooting => _isShooting;
 
     private void Start()
     {
-        //_camera.SetTarget(_currentHook);
         SetHook();
+        
         if (_currentHook != null)
         {
             SetActiveeHook();

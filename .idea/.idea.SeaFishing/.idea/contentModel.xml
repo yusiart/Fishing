@@ -23,6 +23,7 @@
           <e p="ObjectPool.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PoolActivator.cs" t="Include" />
+          <e p="PoolSpawner.cs" t="Include" />
           <e p="Rod.cs" t="Include" />
           <e p="Shop.cs" t="Include" />
           <e p="Spawner.cs" t="Include" />

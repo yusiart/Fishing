@@ -23,7 +23,7 @@ public class PoolActivator : MonoBehaviour
         }
         else if (other.gameObject.TryGetComponent<FishMover>(out FishMover fish))
         {
-            Debug.Log("1");
+            Debug.Log("fish Change Direction");
             fish.ChangeYDirection();
         }
     }
