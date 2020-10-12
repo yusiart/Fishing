@@ -3,16 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Debug = System.Diagnostics.Debug;
 
+[RequireComponent(typeof(Hook))]
 public class Bag : MonoBehaviour
 {
-  [SerializeField] private HookMover _hook;
   [SerializeField] private FishCountDisplay _fishDisplay;
   
-  private int _capacity;
+  private static int _capacity;
+  private HookMover _hook;
   private List<Fish> _fishes = new List<Fish>();
   
   public UnityAction <int, int>  OnFishesCountChanged;
+
+
+  private void Start()
+  {
+    _hook = GetComponent<HookMover>();
+  }
 
   private void OnEnable()
   {
@@ -41,12 +49,16 @@ public class Bag : MonoBehaviour
       
       if (_fishes.Count == _capacity)
       {
-        _hook.Accelerate();
+        //_hook.Accelerate();
+       // _hook.EndCachingFishes();
       }
+      
       
       return true;
     }
-
+     
+    
+     //_hook.EndCachingFishes();
     return false;
   }
 

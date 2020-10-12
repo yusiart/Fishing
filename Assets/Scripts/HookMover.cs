@@ -2,30 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Hook))]
+[RequireComponent(typeof(FishesCollector))]
+[RequireComponent(typeof(LineRenderer))]
+[RequireComponent(typeof(Bag))]
+
 public class HookMover : MonoBehaviour
 {
     [SerializeField] private Transform _origin;
     [SerializeField] private float _startSpeed;
-    [SerializeField] private FishesCollector _collector;
     [SerializeField] private Rod _rod;
-    [SerializeField] private Hook _hook;
     [SerializeField] private float _depth;
 
+    private FishesCollector _collector;
+    private Hook _hook;
     private Vector3 _target;
     private LineRenderer _lineRenderer;
     private bool _retracting;
     private bool _canMove;
-    private float _accelerationCount = 2;
+    private float _accelerationCount = 3;
     private float _currentSpeed;
+    private bool _isBagSpaceEnough;
+
+    public bool Retracting => _retracting;
 
     private void Start()
     {
         _lineRenderer = GetComponent<LineRenderer>();
-        _collector.GetComponent<FishesCollector>();
+        _hook = GetComponent<Hook>();
     }
     
     private void OnEnable()
     {
+        _collector = GetComponent<FishesCollector>();
         _currentSpeed = _startSpeed;
         _collector.ChangeIsFishing(false);
     }
@@ -37,7 +46,7 @@ public class HookMover : MonoBehaviour
             Move();
         }
 
-        if (_retracting)
+        if (_retracting && _isBagSpaceEnough)
             MousePositionFollow();
 
         if (gameObject.transform.position == _target)
@@ -74,6 +83,8 @@ public class HookMover : MonoBehaviour
     {
         _collector.ChangeIsFishing(value);
         _retracting = value;
+        _isBagSpaceEnough = value;
+   
         ResetSpeed();
     }
 
@@ -94,6 +105,12 @@ public class HookMover : MonoBehaviour
         Accelerate();
     }
 
+    public void EndCachingFishes()
+    {
+        _isBagSpaceEnough = false;
+        _target = _origin.transform.position;
+    }
+
     public void Accelerate()
     {
         _currentSpeed *= _accelerationCount;
@@ -102,5 +119,10 @@ public class HookMover : MonoBehaviour
     public void ResetSpeed()
     {
         _currentSpeed = _startSpeed;
+    }
+
+    public void IncreaseDeepLenght()
+    {
+        _depth -= 20;
     }
 }

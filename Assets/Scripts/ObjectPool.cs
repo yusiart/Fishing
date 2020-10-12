@@ -7,8 +7,7 @@ public class ObjectPool : MonoBehaviour
 {
    [SerializeField] private GameObject _container;
    [SerializeField] private int _capacity;
-
-   private List<GameObject> pool = new List<GameObject>();
+   [SerializeField] private List<GameObject> pool = new List<GameObject>();
    
    protected void Initialize(GameObject prefab)
    {
@@ -25,5 +24,17 @@ public class ObjectPool : MonoBehaviour
    {
       result = pool.FirstOrDefault(fish => fish.activeSelf == false);
       return result != null;
+   }
+
+   public void OffFihses()
+   {
+      var sortFish = from fish in pool
+         where fish.activeSelf == true
+      select fish;
+
+      foreach (var fish in sortFish)
+      {
+         fish.gameObject.SetActive(false);
+      }
    }
 }

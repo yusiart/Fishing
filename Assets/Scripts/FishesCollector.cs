@@ -2,22 +2,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Debug = System.Diagnostics.Debug;
 
 public class FishesCollector : MonoBehaviour
 {
-    [SerializeField] private Bag _bag;
+    private Bag _bag;
+    private bool _isFishing = true;
 
-    private bool _isFishing = false;
-    
+    private void OnEnable()
+    {
+        _bag = GetComponent<Bag>();
+    }
 
     public void ChangeIsFishing(bool isFishing)
     {
         _isFishing = isFishing;
+        _isFishing = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent<Fish>(out Fish fish) && _isFishing)
+        if (collision.gameObject.TryGetComponent<Fish>(out Fish fish)) //&& _isFishing)
         {
             if (_bag.TryToAddFish(fish))
             {

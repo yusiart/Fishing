@@ -1,30 +1,41 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using Debug = System.Diagnostics.Debug;
+
+[RequireComponent(typeof(Spawner))]
 
 public class PoolActivator : MonoBehaviour
 {
-    [SerializeField] private GameObject _pool;
+    [SerializeField] private Spawner _spawner;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private Hook _currentHook;
+
+    private void Start()
     {
-        if (other.gameObject.TryGetComponent<Hook>(out Hook hook))
+        _spawner = GetComponent<Spawner>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<Hook>(out Hook hook))// && _currentHook.Retracting == false)
         {
-            _pool.SetActive(true);
+            _spawner.TryActivateFishes();
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    // private void OnTriggerExit2D(Collider2D collision)
+    // {
+    //     if (collision.gameObject.TryGetComponent<Hook>(out Hook hook))// && _currentHook.Retracting)
+    //     {
+    //         _spawner.OffFihses();
+    //     }
+    // }
+
+    public void SetCurrentHook(Hook hook)
     {
-        if (other.gameObject.TryGetComponent<Hook>(out Hook hook))
-        {
-            _pool.SetActive(false);
-        }
-        else if (other.gameObject.TryGetComponent<FishMover>(out FishMover fish))
-        {
-            Debug.Log("fish Change Direction");
-            fish.ChangeYDirection();
-        }
+        _currentHook = hook;
     }
 }

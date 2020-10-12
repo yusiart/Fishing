@@ -10,11 +10,10 @@ using UnityEngine.UI;
 public class Rod : MonoBehaviour
 {
     [SerializeField]private List<Hook> _hooks;
-    [SerializeField] private Hook _currentHook;
-    [SerializeField] private Transform _origin;
     [SerializeField] private CameraMover _camera;
     [SerializeField] private List<Button> _buttons;
     
+    private Hook _currentHook;
     private bool _isShooting;
     int i;
 

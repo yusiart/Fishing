@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using Debug = System.Diagnostics.Debug;
 using Random = UnityEngine.Random;
 
 public class Spawner : ObjectPool
@@ -23,20 +24,10 @@ public class Spawner : ObjectPool
       }
    }
 
-   private void Update()
-   {
-      if (TryGetObject(out GameObject fish))
-      {
-         _currentPoint = Random.Range(0, _spawnPoints.Count);
-         SetEnemy(fish,_spawnPoints[_currentPoint].position);
-      }
-   }
-
-   private void SetEnemy(GameObject prefab, Vector2 spawnPoint)
+   private void SetFish(GameObject prefab, Vector2 spawnPoint)
    {
       prefab.transform.position = spawnPoint;
       prefab.SetActive(true);
-      prefab.GetComponent<FishMover>().SetTransform(transform);
    }
 
    private void GetSpawnPoints()
@@ -47,19 +38,20 @@ public class Spawner : ObjectPool
       }
    }
 
+   public void TryActivateFishes()
+   {
+      while(TryGetObject(out GameObject fish))
+      {
+         _currentPoint = Random.Range(0, _spawnPoints.Count);
+         SetFish(fish,_spawnPoints[_currentPoint].transform.position);
+      }
+   }
+
    public void SetPrefabs(List<GameObject> prefabs)
    {
       foreach (var fish in prefabs)
       {
-         _prefabs.Add(fish); 
-      }
-   }
-   
-   private void OnTriggerEnter2D(Collider2D other)
-   {
-      if (other.gameObject.TryGetComponent<Hook>(out Hook hook))
-      {
-         this.gameObject.SetActive(true);
+         _prefabs.Add(fish);
       }
    }
 }

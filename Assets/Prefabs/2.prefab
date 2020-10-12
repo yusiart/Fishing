@@ -131,6 +131,8 @@ MonoBehaviour:
   _price: 20
   _name: hook
   _icon: {fileID: 21300000, guid: 328df06cda1ab4037b9cdaefc3ad32d5, type: 3}
+  _player: {fileID: 0}
+  _bag: {fileID: 0}
 --- !u!120 &962170540793434118
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -274,6 +276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2141e08dae9a54cdc9d518f0100f138d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hook: {fileID: 0}
+  _fishDisplay: {fileID: 0}
 --- !u!114 &4519855546920240683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,10 +291,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _origin: {fileID: 0}
-  _speed: 6
+  _startSpeed: 0
   _collector: {fileID: 7553602889011212914}
   _rod: {fileID: 0}
-  _bag: {fileID: 984649488944786881}
-  _player: {fileID: 0}
   _hook: {fileID: 6069096943065977349}
   _depth: -20
