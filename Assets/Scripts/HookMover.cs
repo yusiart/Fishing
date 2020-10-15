@@ -1,26 +1,29 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Hook))]
 [RequireComponent(typeof(FishesCollector))]
 [RequireComponent(typeof(LineRenderer))]
 [RequireComponent(typeof(Bag))]
+[RequireComponent(typeof(Rigidbody2D))]
 
 public class HookMover : MonoBehaviour
 {
     [SerializeField] private Transform _origin;
-    [SerializeField] private float _startSpeed;
     [SerializeField] private Rod _rod;
-    [SerializeField] private float _depth;
+    [SerializeField] private GameObject _collectPanel;
 
+    private float _startSpeed = 8f;
     private FishesCollector _collector;
     private Hook _hook;
     private Vector3 _target;
     private LineRenderer _lineRenderer;
     private bool _retracting;
     private bool _canMove;
-    private float _accelerationCount = 3;
+    private float _accelerationCount = 4;
     private float _currentSpeed;
     private bool _isBagSpaceEnough;
 
@@ -38,22 +41,20 @@ public class HookMover : MonoBehaviour
         _currentSpeed = _startSpeed;
         _collector.ChangeIsFishing(false);
     }
-    
+
     private void Update()
     {
         if (_canMove)
-        {
             Move();
-        }
-
+        
         if (_retracting && _isBagSpaceEnough)
             MousePositionFollow();
 
-        if (gameObject.transform.position == _target)
+        if (gameObject.transform.position ==_target && !_retracting)
         {
             StartFishing();
         }
-        else if ((_origin.position.y - transform.position.y) < 0.3f && _retracting)
+        else if ((_target.y == transform.position.y) && _retracting)
         {
             EndFishing();
         }
@@ -74,9 +75,9 @@ public class HookMover : MonoBehaviour
     private void EndFishing()
     {
         _hook.TryToSellFishes();
-        _rod.Reload();
         _canMove = false;
         ChangeFishingValues(false);
+        _collectPanel.SetActive(true);
     }
 
     private void ChangeFishingValues(bool value)
@@ -97,10 +98,24 @@ public class HookMover : MonoBehaviour
         _target = new Vector3(0f, _origin.transform.position.y, 0f);
     }
 
-    public void SetTarget()
+    // private void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //     // ne rabotaet stolknovenie
+    //     if (collision.gameObject.TryGetComponent<Player>(out Player player))
+    //     {
+    //         EndCachingFishes();
+    //     }
+    // }
+
+    public void ReloadRod()
     {
-        Vector2 down = new Vector2(0, _depth);
-        _target = down;
+        _rod.Reload();
+        _collectPanel.SetActive(false);
+    }
+
+    public void SetTarget(float depth)
+    {
+        _target = new Vector2(0, depth);
         _canMove = true;
         Accelerate();
     }
@@ -108,6 +123,7 @@ public class HookMover : MonoBehaviour
     public void EndCachingFishes()
     {
         _isBagSpaceEnough = false;
+        Accelerate();
         _target = _origin.transform.position;
     }
 
@@ -119,10 +135,5 @@ public class HookMover : MonoBehaviour
     public void ResetSpeed()
     {
         _currentSpeed = _startSpeed;
-    }
-
-    public void IncreaseDeepLenght()
-    {
-        _depth -= 20;
     }
 }

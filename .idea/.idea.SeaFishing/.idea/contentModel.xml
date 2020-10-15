@@ -14,6 +14,7 @@
           <e p="FishCountDisplay.cs" t="Include" />
           <e p="FishesCollector.cs" t="Include" />
           <e p="FishMover.cs" t="Include" />
+          <e p="FishPool.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
           <e p="Hook.cs" t="Include" />
           <e p="HookMover.cs" t="Include" />

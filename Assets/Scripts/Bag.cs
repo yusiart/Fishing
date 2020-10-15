@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using Debug = System.Diagnostics.Debug;
 
-[RequireComponent(typeof(Hook))]
 public class Bag : MonoBehaviour
 {
   [SerializeField] private FishCountDisplay _fishDisplay;
@@ -49,16 +48,12 @@ public class Bag : MonoBehaviour
       
       if (_fishes.Count == _capacity)
       {
-        //_hook.Accelerate();
-       // _hook.EndCachingFishes();
+        _hook.EndCachingFishes();
       }
-      
       
       return true;
     }
      
-    
-     //_hook.EndCachingFishes();
     return false;
   }
 

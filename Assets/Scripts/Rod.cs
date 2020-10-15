@@ -11,13 +11,17 @@ public class Rod : MonoBehaviour
 {
     [SerializeField]private List<Hook> _hooks;
     [SerializeField] private CameraMover _camera;
-    [SerializeField] private List<Button> _buttons;
-    
+    [SerializeField] private List<Image> _images;
+
+    private float _depth = -30;
     private Hook _currentHook;
     private bool _isShooting;
-    int i;
+    private int _capacity = 3;
+    private int _counter;
 
     public bool IsShooting => _isShooting;
+
+    public Hook CurrentHook => _currentHook;
 
     private void Start()
     {
@@ -51,7 +55,7 @@ public class Rod : MonoBehaviour
             ResetButtons(false);
             SetActiveeHook();
             _isShooting = true;
-            hook.GetComponent<HookMover>().SetTarget();
+            hook.GetComponent<HookMover>().SetTarget(_depth);
         }
     }
 
@@ -63,6 +67,7 @@ public class Rod : MonoBehaviour
         }
         
         _currentHook.gameObject.SetActive(true);
+        _currentHook.UpdateFishesBag(_capacity);
     }
 
     public void Reload()
@@ -82,25 +87,36 @@ public class Rod : MonoBehaviour
             return;
         }
         
-        if (i < filtredHooks.Count - 1)
+        if (_counter < filtredHooks.Count - 1)
         {
-            i++;
+            _counter++;
         }
         else
         {
-            i = 0;
+            _counter = 0;
         }
         
-        _currentHook = _hooks[i];
+        _currentHook = _hooks[_counter];
         _camera.GetObject(_currentHook);
         SetActiveeHook();
     }
 
     private void ResetButtons(bool value)
     {
-        foreach (var button in _buttons)
+        foreach (var button in _images)
         {
             button.gameObject.SetActive(value);
         }
+    }
+    
+    public void IncreaseDeepLenght()
+    {
+        _depth -= 20;
+    }
+    
+    public void EnlargeCapacity()
+    {
+        _capacity += 1;
+       _currentHook.UpdateFishesBag(_capacity);
     }
 }

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     [SerializeField] private Rod _rod;
+    [SerializeField] private Player _player;
 
     public void OnChangeHookButtonClick()
     {
@@ -14,5 +15,18 @@ public class GameController : MonoBehaviour
         {
             _rod.SetHook();
         }
+    }
+
+    public void OnCollectButtonClick(bool x2Collect)
+    {
+        _player.ChangeMoneyDisplay(x2Collect);
+        StartCoroutine(ExampleCoroutine());
+    }
+    
+    IEnumerator ExampleCoroutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+        
+        _rod.CurrentHook.CloseCollectPanel();
     }
 }

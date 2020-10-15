@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Debug = System.Diagnostics.Debug;
 
 public class Hook : MonoBehaviour
@@ -10,12 +11,14 @@ public class Hook : MonoBehaviour
    [SerializeField] private Sprite _icon;
    [SerializeField] private Player _player;
    [SerializeField] private Transform _poolPointContainer;
+   [SerializeField] private bool _isBuyed;
    
    private Bag _bag;
-   private bool _isBuyed;
-   private int _capacity = 3;
+   private HookMover _hookMover;
    private SpriteRenderer _renderer;
    private HookMover _mover;
+   
+   public event UnityAction OnClosePanel;
 
    // event ? ??  kazdij raz izmnenjat' nuzno
    [HideInInspector] public bool Retracting;
@@ -31,10 +34,17 @@ public class Hook : MonoBehaviour
    {
       _mover = GetComponent<HookMover>();
       _bag = GetComponent<Bag>();
+      _hookMover = GetComponent<HookMover>();
       
       Retracting = _mover.Retracting;
-      _bag.UpdateFishesBag(_capacity);
-     // ResetPoolActivators();
+
+      OnClosePanel += _hookMover.ReloadRod;
+      // ResetPoolActivators();
+   }
+   
+   private void OnDisable()
+   {
+      OnClosePanel -= _hookMover.ReloadRod;
    }
    
    // private void ResetPoolActivators()
@@ -55,9 +65,13 @@ public class Hook : MonoBehaviour
       _bag.TryToSellFishes(_player);
    }
 
-   public void EnlargeCapacity()
+   public void CloseCollectPanel()
    {
-      _capacity += 2;
-      _bag.UpdateFishesBag(_capacity);
+      OnClosePanel?.Invoke();
+   }
+
+   public void UpdateFishesBag(int capacity)
+   {
+      _bag.UpdateFishesBag(capacity);
    }
 }
