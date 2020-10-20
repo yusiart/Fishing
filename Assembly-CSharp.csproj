@@ -79,6 +79,7 @@
      <Compile Include="Assets\Scripts\Rod.cs" />
      <Compile Include="Assets\Scripts\Shop.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\UpgrateButton.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/yuravishnyakov/Projects/SeaFishing/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

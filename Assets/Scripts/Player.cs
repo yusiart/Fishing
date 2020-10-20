@@ -60,4 +60,36 @@ public class Player : MonoBehaviour
       
       hook.Unlock();
    }
+
+   public bool TryBuyLenght(int price)
+   {
+      if (TrySpendMoney(price))
+      {
+         return true;
+      }
+      
+      return false;
+   }
+
+   public bool TryToBuyCapacity(int price)
+   {
+      if (TrySpendMoney(price))
+      {
+         return true;
+      }
+      
+      return false;
+   }
+
+   private bool TrySpendMoney(int price)
+   {
+      if (_money >= price)
+      {
+         _money -= price;
+         OnMoneyChanged?.Invoke(_money);
+         return true;
+      }
+
+      return false;
+   }
 }

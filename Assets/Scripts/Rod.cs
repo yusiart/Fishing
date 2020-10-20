@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Debug = System.Diagnostics.Debug;
 
 public class Rod : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Rod : MonoBehaviour
     private bool _isShooting;
     private int _capacity = 3;
     private int _counter;
+    private Player _player;
 
     public bool IsShooting => _isShooting;
 
@@ -31,10 +33,13 @@ public class Rod : MonoBehaviour
         {
             SetActiveeHook();
         }
+        
+        _player = _currentHook.Player;
     }
 
     private void Update()
     {
+        
 #if UNITY_ANDROID
         if (Input.touchCount > 0 && !_isShooting)
         {
@@ -123,14 +128,26 @@ public class Rod : MonoBehaviour
         }
     }
     
-    public void IncreaseDeepLenght()
+    public bool IncreaseDeepLenght(int price)
     {
-        _depth -= 20;
+        if (_player.TryBuyLenght(price))
+        {
+            _depth -= 20;
+            return true;
+        }
+
+        return false;
     }
     
-    public void EnlargeCapacity()
+    public bool EnlargeCapacity(int price)
     {
-        _capacity += 1;
-       _currentHook.UpdateFishesBag(_capacity);
+        if (_player.TryToBuyCapacity(price))
+        {
+            _capacity += 1;
+            _currentHook.UpdateFishesBag(_capacity);
+            return true;
+        }
+
+        return false;
     }
 }

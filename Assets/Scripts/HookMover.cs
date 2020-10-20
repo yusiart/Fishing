@@ -92,8 +92,12 @@ public class HookMover : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
             Vector3 touchPos = Camera.main.ScreenToWorldPoint(touch.position);
+            Vector3 pos = transform.position;
+            pos.x = touch.position.x;
             transform.position = touchPos;
         }
+        
+        _target = _origin.transform.position;
 #endif
 
         Vector3 vector = Camera.main.ScreenToWorldPoint(Input.mousePosition);

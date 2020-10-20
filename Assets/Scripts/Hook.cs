@@ -23,6 +23,8 @@ public class Hook : MonoBehaviour
    private HookMover _hookMover;
    private SpriteRenderer _renderer;
 
+   public Player Player => _player;
+
    public event UnityAction OnCloseCollectPanel;
 
    // event ? ??  kazdij raz izmnenjat' nuzno
