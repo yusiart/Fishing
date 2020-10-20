@@ -11,6 +11,9 @@ public class CameraMover : MonoBehaviour
     [SerializeField]private Vector2 _offset = new Vector2(0, 1f);
     [SerializeField]private float _damping = 1.5f;
 
+    //private float _outOfRangeYPos = 10f;
+    // [SerializeField] private List<Fish> _allFishes = new List<Fish>();
+
     void Start ()
     {
         _offset = new Vector2(Mathf.Abs(_offset.x), _offset.y);
@@ -25,8 +28,28 @@ public class CameraMover : MonoBehaviour
         }
     }
 
+
     public void GetObject(Hook hook)
     {
         _hook = hook;
     }
+
+    // private void CheckFish()
+    // {
+    //     for(int i = 0; i < _fishes.Count; i++)
+    // {
+    //    if(_fishes[i].transform.position.y > 20 \\ _fishes[i].transform.position < 20)
+    //     fish.gameobject.SetActive(false);
+    // }
+    // }
+    //
+    // private void FindAllFishes()
+    // {
+    //     Fish fish;
+    //     
+    //     while (fish = FindObjectOfType<Fish>())
+    //     {
+    //         _allFishes.Add(fish);
+    //     }
+    // }
 }

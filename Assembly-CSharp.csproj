@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\Hook.cs" />
      <Compile Include="Assets\Scripts\HookMover.cs" />
      <Compile Include="Assets\Scripts\HookView.cs" />
+     <Compile Include="Assets\Scripts\InitilizeAds.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\MoneyDisplay.cs" />
      <Compile Include="Assets\Scripts\ObjectPool.cs" />
@@ -158,6 +159,12 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/yuravishnyakov/Projects/SeaFishing/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Monetization">
+ <HintPath>/Users/yuravishnyakov/Projects/SeaFishing/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/Users/yuravishnyakov/Projects/SeaFishing/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Users/yuravishnyakov/Games/2019.4.6f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using Debug = System.Diagnostics.Debug;
 
 public class HookView : MonoBehaviour
 {
@@ -11,20 +12,26 @@ public class HookView : MonoBehaviour
     [SerializeField] private Text _price;
     [SerializeField] private Image _icon;
     [SerializeField] private Button _buyButton;
-
+    [SerializeField] private Button _buyForWatchButton;
+    
+    private InitilizeAds _ads;
     private Hook _hook;
-
-    public UnityAction<Hook, HookView> SellButtonClick;
+    public UnityAction<Hook, HookView, bool> SellButtonClick;
     
     private void OnEnable()
     {
+        _ads = GetComponent<InitilizeAds>();
         _buyButton.onClick.AddListener(OnBuyButton);
         _buyButton.onClick.AddListener(TryToLockHook);
+        _buyForWatchButton.onClick.AddListener(OnBuyForWatchButtonClick);
+        _buyForWatchButton.onClick.AddListener(TryToLockHook);
     }
     private void OnDisable()
     {
         _buyButton.onClick.RemoveListener(OnBuyButton);
         _buyButton.onClick.RemoveListener(TryToLockHook);
+        _buyForWatchButton.onClick.RemoveListener(OnBuyForWatchButtonClick);
+        _buyForWatchButton.onClick.RemoveListener(TryToLockHook);
     }
 
     private void TryToLockHook()
@@ -45,6 +52,12 @@ public class HookView : MonoBehaviour
 
     public void OnBuyButton()
     {
-        SellButtonClick?.Invoke(_hook, this);
+        SellButtonClick?.Invoke(_hook, this, false);
+    }
+
+    public void OnBuyForWatchButtonClick()
+    {
+        _ads.ShowInterstitialAd();
+        SellButtonClick?.Invoke(_hook, this, true);
     }
 }

@@ -4,17 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Hook))]
-[RequireComponent(typeof(FishesCollector))]
-[RequireComponent(typeof(LineRenderer))]
-[RequireComponent(typeof(Bag))]
-[RequireComponent(typeof(Rigidbody2D))]
-
 public class HookMover : MonoBehaviour
 {
     [SerializeField] private Transform _origin;
     [SerializeField] private Rod _rod;
-    [SerializeField] private GameObject _collectPanel;
+    [SerializeField] private GameObject _endFishingCollectPanel;
 
     private float _startSpeed = 8f;
     private FishesCollector _collector;
@@ -33,12 +27,12 @@ public class HookMover : MonoBehaviour
     {
         _lineRenderer = GetComponent<LineRenderer>();
         _hook = GetComponent<Hook>();
+        _currentSpeed = _startSpeed;
+        _collector = GetComponent<FishesCollector>();
     }
     
     private void OnEnable()
     {
-        _collector = GetComponent<FishesCollector>();
-        _currentSpeed = _startSpeed;
         _collector.ChangeIsFishing(false);
     }
 
@@ -50,11 +44,11 @@ public class HookMover : MonoBehaviour
         if (_retracting && _isBagSpaceEnough)
             MousePositionFollow();
 
-        if (gameObject.transform.position ==_target && !_retracting)
+        if (Math.Abs(gameObject.transform.position.y - _target.y) < 0.01f && !_retracting)
         {
             StartFishing();
         }
-        else if ((_target.y == transform.position.y) && _retracting)
+        else if ((Math.Abs(_origin.transform.position.y - transform.position.y) < 0.1f) && _retracting)
         {
             EndFishing();
         }
@@ -77,7 +71,8 @@ public class HookMover : MonoBehaviour
         _hook.TryToSellFishes();
         _canMove = false;
         ChangeFishingValues(false);
-        _collectPanel.SetActive(true);
+        _endFishingCollectPanel.SetActive(true);
+        _target = new Vector3(0,0,0);
     }
 
     private void ChangeFishingValues(bool value)
@@ -91,11 +86,22 @@ public class HookMover : MonoBehaviour
 
     private void MousePositionFollow()
     {
+#if UNITY_ANDROID
+
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            Vector3 touchPos = Camera.main.ScreenToWorldPoint(touch.position);
+            transform.position = touchPos;
+        }
+#endif
+
         Vector3 vector = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 position = transform.position;
         position.x = vector.x;
         transform.position = position;
-        _target = new Vector3(0f, _origin.transform.position.y, 0f);
+
+        _target = _origin.transform.position;
     }
 
     // private void OnCollisionEnter2D(Collision2D collision)
@@ -110,7 +116,7 @@ public class HookMover : MonoBehaviour
     public void ReloadRod()
     {
         _rod.Reload();
-        _collectPanel.SetActive(false);
+        _endFishingCollectPanel.SetActive(false);
     }
 
     public void SetTarget(float depth)

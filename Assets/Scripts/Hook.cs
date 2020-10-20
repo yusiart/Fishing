@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.Events;
 using Debug = System.Diagnostics.Debug;
 
+[RequireComponent(typeof(Hook))]
+[RequireComponent(typeof(FishesCollector))]
+[RequireComponent(typeof(LineRenderer))]
+[RequireComponent(typeof(Bag))]
+[RequireComponent(typeof(Rigidbody2D))]
+
 public class Hook : MonoBehaviour
 {
    [SerializeField] private int _price;
@@ -16,9 +22,8 @@ public class Hook : MonoBehaviour
    private Bag _bag;
    private HookMover _hookMover;
    private SpriteRenderer _renderer;
-   private HookMover _mover;
-   
-   public event UnityAction OnClosePanel;
+
+   public event UnityAction OnCloseCollectPanel;
 
    // event ? ??  kazdij raz izmnenjat' nuzno
    [HideInInspector] public bool Retracting;
@@ -32,19 +37,19 @@ public class Hook : MonoBehaviour
 
    private void OnEnable()
    {
-      _mover = GetComponent<HookMover>();
       _bag = GetComponent<Bag>();
       _hookMover = GetComponent<HookMover>();
       
-      Retracting = _mover.Retracting;
+      //^^^]]
+      //Retracting = _mover.Retracting;
 
-      OnClosePanel += _hookMover.ReloadRod;
+      OnCloseCollectPanel += _hookMover.ReloadRod;
       // ResetPoolActivators();
    }
    
    private void OnDisable()
    {
-      OnClosePanel -= _hookMover.ReloadRod;
+      OnCloseCollectPanel -= _hookMover.ReloadRod;
    }
    
    // private void ResetPoolActivators()
@@ -55,7 +60,7 @@ public class Hook : MonoBehaviour
    //    }
    // }
 
-   public void Buy()
+   public void Unlock()
    {
       _isBuyed = true;
    }
@@ -67,7 +72,7 @@ public class Hook : MonoBehaviour
 
    public void CloseCollectPanel()
    {
-      OnClosePanel?.Invoke();
+      OnCloseCollectPanel?.Invoke();
    }
 
    public void UpdateFishesBag(int capacity)

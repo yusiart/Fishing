@@ -29,7 +29,8 @@ public class FishMover : MonoBehaviour
 
   private void Update()
   {
-    if (!_isItCatched) Move();
+    if (!_isItCatched)
+        Move();
   }
 
   private void SetStartSettings()

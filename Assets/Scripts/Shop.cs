@@ -25,19 +25,29 @@ public class Shop : MonoBehaviour
         item.SellButtonClick += OnSellButtonClick;
         item.Render(hook);
     }
+    
 
-    private void OnSellButtonClick(Hook hook, HookView view)
+    private void OnSellButtonClick(Hook hook, HookView view, bool buyForAds)
     {
-        TryToSellHook(hook, view);
+        TryToSellHook(hook, view, buyForAds);
     }
 
-    private void TryToSellHook(Hook hook, HookView view)
+    private void TryToSellHook(Hook hook, HookView view, bool buyForAds)
     {
-        if (_player.Money >= hook.Price)
+        if (buyForAds)
         {
-            _player.BuyHook(hook);
-            _rod.SetHook();
-            view.SellButtonClick -= OnSellButtonClick;
+            BuyHook(hook, view,buyForAds);
         }
+        else if (_player.Money >= hook.Price)
+        {
+            BuyHook(hook, view,buyForAds);
+        }
+    }
+
+    private void BuyHook(Hook hook, HookView view, bool buyForAds)
+    {
+        _player.BuyHook(hook, buyForAds);
+        _rod.SetHook();
+        view.SellButtonClick -= OnSellButtonClick;
     }
 }

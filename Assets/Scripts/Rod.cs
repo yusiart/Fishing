@@ -35,6 +35,20 @@ public class Rod : MonoBehaviour
 
     private void Update()
     {
+#if UNITY_ANDROID
+        if (Input.touchCount > 0 && !_isShooting)
+        {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
+            else
+            {
+                LaunchHook(_currentHook);
+            }
+        }
+#endif
+        
         if (Input.GetMouseButtonDown(0) && !_isShooting)
         {
             if (EventSystem.current.IsPointerOverGameObject())
@@ -96,7 +110,7 @@ public class Rod : MonoBehaviour
             _counter = 0;
         }
         
-        _currentHook = _hooks[_counter];
+        _currentHook = filtredHooks[_counter];
         _camera.GetObject(_currentHook);
         SetActiveeHook();
     }

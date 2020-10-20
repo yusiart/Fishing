@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Advertisements;
 
 public class Player : MonoBehaviour
 {
    [SerializeField] private int _money;
 
    private int _sumReward;
+   private InitilizeAds _ads;
 
    public int Money
    {
@@ -19,6 +21,7 @@ public class Player : MonoBehaviour
 
    private void Start()
    {
+      _ads = GetComponent<InitilizeAds>();
       OnMoneyChanged?.Invoke(_money);
    }
 
@@ -35,7 +38,8 @@ public class Player : MonoBehaviour
    {
       if (collectX3)
       {
-          _money += _sumReward * 3;
+         _ads.ShowInterstitialAd();
+         _money += _sumReward * 3;
       }
       else
       {
@@ -46,10 +50,14 @@ public class Player : MonoBehaviour
       _sumReward = 0;
    }
 
-   public void BuyHook(Hook hook)
+   public void BuyHook(Hook hook, bool buyForAds)
    {
-      _money -= hook.Price;
-      OnMoneyChanged?.Invoke(_money);
-      hook.Buy();
+      if (!buyForAds)
+      {
+         _money -= hook.Price;
+         OnMoneyChanged?.Invoke(_money);
+      }
+      
+      hook.Unlock();
    }
 }
