@@ -20,6 +20,7 @@ public class Rod : MonoBehaviour
     private int _capacity = 3;
     private int _counter;
     private Player _player;
+    private int _maxDeepth = -700;
     
     public Player Player => _player;
 
@@ -135,8 +136,16 @@ public class Rod : MonoBehaviour
     {
         if (_player.TryBuyLenght(price))
         {
-            _depth -= 20;
-            return true;
+            if (_depth -20 >= _maxDeepth)
+            {
+                 _depth -= 20;
+                 return true;
+            }
+            else
+            {
+                _depth = _maxDeepth;
+                return true;
+            }
         }
 
         return false;

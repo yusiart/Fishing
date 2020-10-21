@@ -35,7 +35,7 @@ public class UpgrateButton : MonoBehaviour
 
    private void UpdatePrice()
    {
-      price += price * 2;
+      price = (int)(price * 1.8f);
       _price.text = price.ToString();
    }
 }
