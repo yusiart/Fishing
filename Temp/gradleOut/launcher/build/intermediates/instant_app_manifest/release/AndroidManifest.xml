@@ -22,6 +22,9 @@
     <uses-feature
         android:name="android.hardware.vulkan.version"
         android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-feature
         android:name="android.hardware.touchscreen"
         android:required="false" />
@@ -33,7 +36,6 @@
         android:required="false" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:icon="@mipmap/app_icon"
@@ -70,7 +72,7 @@
             android:value="portrait|landscape" />
         <meta-data
             android:name="unity.build-id"
-            android:value="7786b7cf-cb96-4de7-9f5c-a3adf046a741" />
+            android:value="331bdc97-482c-4056-acb3-6a5827c14711" />
 
         <activity
             android:name="com.unity3d.services.ads.adunit.AdUnitActivity"

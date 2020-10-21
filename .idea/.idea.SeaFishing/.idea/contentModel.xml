@@ -10,6 +10,7 @@
         <e p="Scripts" t="Include">
           <e p="Bag.cs" t="Include" />
           <e p="CameraMover.cs" t="Include" />
+          <e p="CollectText.cs" t="Include" />
           <e p="Fish.cs" t="Include" />
           <e p="FishCountDisplay.cs" t="Include" />
           <e p="FishesCollector.cs" t="Include" />

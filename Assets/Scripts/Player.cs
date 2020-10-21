@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
    private int _sumReward;
    private InitilizeAds _ads;
+   private CollectText _text;
 
    public int Money
    {
@@ -19,8 +20,10 @@ public class Player : MonoBehaviour
 
    public event UnityAction<int> OnMoneyChanged;
 
+
    private void Start()
    {
+      _text = GetComponent<CollectText>();
       _ads = GetComponent<InitilizeAds>();
       OnMoneyChanged?.Invoke(_money);
    }
@@ -79,6 +82,10 @@ public class Player : MonoBehaviour
       }
       
       return false;
+   }
+   public void SetText()
+   {
+      _text.SetText(_sumReward);
    }
 
    private bool TrySpendMoney(int price)

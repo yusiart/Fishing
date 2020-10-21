@@ -23,7 +23,7 @@ public class HookMover : MonoBehaviour
 
     public bool Retracting => _retracting;
 
-    private void Start()
+    private void Awake()
     {
         _lineRenderer = GetComponent<LineRenderer>();
         _hook = GetComponent<Hook>();
@@ -72,6 +72,7 @@ public class HookMover : MonoBehaviour
         _canMove = false;
         ChangeFishingValues(false);
         _endFishingCollectPanel.SetActive(true);
+        _rod.Player.SetText();
         _target = new Vector3(0,0,0);
     }
 
@@ -92,9 +93,9 @@ public class HookMover : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
             Vector3 touchPos = Camera.main.ScreenToWorldPoint(touch.position);
-            Vector3 pos = transform.position;
-            pos.x = touch.position.x;
-            transform.position = touchPos;
+            Vector3 poss = transform.position;
+            poss.x = touchPos.x;
+            transform.position = poss;
         }
         
         _target = _origin.transform.position;
@@ -104,7 +105,7 @@ public class HookMover : MonoBehaviour
         Vector3 position = transform.position;
         position.x = vector.x;
         transform.position = position;
-
+        
         _target = _origin.transform.position;
     }
 

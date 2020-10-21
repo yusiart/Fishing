@@ -7,15 +7,16 @@ using UnityEngine;
 
 public class CameraMover : MonoBehaviour
 { 
-    [SerializeField] private Hook _hook;
     [SerializeField]private Vector2 _offset = new Vector2(0, 1f);
     [SerializeField]private float _damping = 1.5f;
 
+    private Hook _hook;
     //private float _outOfRangeYPos = 10f;
     // [SerializeField] private List<Fish> _allFishes = new List<Fish>();
 
     void Start ()
     {
+        Screen.SetResolution (Screen.width, Screen.height, true);
         _offset = new Vector2(Mathf.Abs(_offset.x), _offset.y);
     }
 

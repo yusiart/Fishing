@@ -20,6 +20,8 @@ public class Rod : MonoBehaviour
     private int _capacity = 3;
     private int _counter;
     private Player _player;
+    
+    public Player Player => _player;
 
     public bool IsShooting => _isShooting;
 
@@ -41,11 +43,12 @@ public class Rod : MonoBehaviour
     {
         
 #if UNITY_ANDROID
-        if (Input.touchCount > 0 && !_isShooting)
+        
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && !_isShooting)
         {
-            if (EventSystem.current.IsPointerOverGameObject())
+            if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
             {
-                return;
+              return;
             }
             else
             {
