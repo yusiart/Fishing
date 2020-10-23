@@ -30,6 +30,9 @@ public class Rod : MonoBehaviour
 
     private void Start()
     {
+        _capacity = PlayerPrefs.GetInt("_capacity");
+        _depth = PlayerPrefs.GetFloat("_deepth");
+        
         SetHook();
         
         if (_currentHook != null)
@@ -139,11 +142,13 @@ public class Rod : MonoBehaviour
             if (_depth -20 >= _maxDeepth)
             {
                  _depth -= 20;
+                 PlayerPrefs.SetFloat("_deepth", _depth);
                  return true;
             }
             else
             {
                 _depth = _maxDeepth;
+                PlayerPrefs.SetFloat("_deepth", _depth);
                 return true;
             }
         }
@@ -156,6 +161,7 @@ public class Rod : MonoBehaviour
         if (_player.TryToBuyCapacity(price))
         {
             _capacity += 1;
+            PlayerPrefs.SetInt("_capacity" , _capacity);
             _currentHook.UpdateFishesBag(_capacity);
             return true;
         }

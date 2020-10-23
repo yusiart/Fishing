@@ -58,29 +58,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Bag.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
      <Compile Include="Assets\Scripts\CameraMover.cs" />
-     <Compile Include="Assets\Scripts\CollectText.cs" />
      <Compile Include="Assets\Scripts\Fish.cs" />
-     <Compile Include="Assets\Scripts\FishCountDisplay.cs" />
      <Compile Include="Assets\Scripts\FishMover.cs" />
-     <Compile Include="Assets\Scripts\FishPool.cs" />
-     <Compile Include="Assets\Scripts\FishesCollector.cs" />
-     <Compile Include="Assets\Scripts\GameController.cs" />
-     <Compile Include="Assets\Scripts\Hook.cs" />
-     <Compile Include="Assets\Scripts\HookMover.cs" />
+     <Compile Include="Assets\Scripts\HookObjects\Bag.cs" />
+     <Compile Include="Assets\Scripts\HookObjects\FishesCollector.cs" />
+     <Compile Include="Assets\Scripts\HookObjects\Hook.cs" />
+     <Compile Include="Assets\Scripts\HookObjects\HookMover.cs" />
      <Compile Include="Assets\Scripts\HookView.cs" />
      <Compile Include="Assets\Scripts\InitilizeAds.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
-     <Compile Include="Assets\Scripts\MoneyDisplay.cs" />
      <Compile Include="Assets\Scripts\ObjectPool.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PoolActivator.cs" />
      <Compile Include="Assets\Scripts\PoolSpawner.cs" />
      <Compile Include="Assets\Scripts\Rod.cs" />
-     <Compile Include="Assets\Scripts\Shop.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
-     <Compile Include="Assets\Scripts\UpgrateButton.cs" />
+     <Compile Include="Assets\Scripts\UI\CollectText.cs" />
+     <Compile Include="Assets\Scripts\UI\FishCountDisplay.cs" />
+     <Compile Include="Assets\Scripts\UI\GameController.cs" />
+     <Compile Include="Assets\Scripts\UI\MoneyDisplay.cs" />
+     <Compile Include="Assets\Scripts\UI\Shop.cs" />
+     <Compile Include="Assets\Scripts\UI\UpdateButtonParametrs.cs" />
+     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
+     <None Include="Assets\JMO Assets\Cartoon FX\CartoonFX Free.txt" />
+     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/yuravishnyakov/Projects/SeaFishing/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

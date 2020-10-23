@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
    {
       _text = GetComponent<CollectText>();
       _ads = GetComponent<InitilizeAds>();
+      _money = PlayerPrefs.GetInt("_money");
       OnMoneyChanged?.Invoke(_money);
    }
 
@@ -33,7 +34,6 @@ public class Player : MonoBehaviour
       if (fish.Reward > 0)
       {
          _sumReward += fish.Reward;
-         OnMoneyChanged?.Invoke(_money);
       }
    }
 
@@ -86,6 +86,11 @@ public class Player : MonoBehaviour
    public void SetText()
    {
       _text.SetText(_sumReward);
+   }
+
+   public void SaveMoney()
+   {
+      PlayerPrefs.SetInt("_money", _money);
    }
 
    private bool TrySpendMoney(int price)
