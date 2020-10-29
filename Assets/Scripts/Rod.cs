@@ -14,25 +14,40 @@ public class Rod : MonoBehaviour
     [SerializeField] private CameraMover _camera;
     [SerializeField] private List<Image> _images;
 
-    private float _depth = -30;
+    private float _depth = -250;
     private Hook _currentHook;
     private bool _isShooting;
     private int _capacity = 3;
     private int _counter;
     private Player _player;
-    private int _maxDeepth = -700;
+    private int _maxDeepth = -900;
+    private LayerMask _waterLayer;
     
     public Player Player => _player;
-
     public bool IsShooting => _isShooting;
-
     public Hook CurrentHook => _currentHook;
+
+    private void Awake()
+    {
+        LoadBuyedHooks();
+    }
+
+    private void OnEnable()
+    {
+        if (PlayerPrefs.HasKey("_capacity"))
+        {
+            _capacity = PlayerPrefs.GetInt("_capacity");
+        }
+        
+        if (PlayerPrefs.HasKey("_deepth"))
+        {
+            _depth = PlayerPrefs.GetFloat("_deepth");
+        }
+    }
 
     private void Start()
     {
-        _capacity = PlayerPrefs.GetInt("_capacity");
-        _depth = PlayerPrefs.GetFloat("_deepth");
-        
+
         SetHook();
         
         if (_currentHook != null)
@@ -74,6 +89,16 @@ public class Rod : MonoBehaviour
         }
     }
 
+    private void LoadBuyedHooks()
+    {
+        foreach (var hook in _hooks)
+        {
+            hook.gameObject.SetActive(true);
+            hook.CheckBuyedHooks(hook.Number);
+            hook.gameObject.SetActive(false);
+        }
+    }
+
     private void LaunchHook(Hook hook)
     {
         if (hook != null)
@@ -95,7 +120,7 @@ public class Rod : MonoBehaviour
         _currentHook.gameObject.SetActive(true);
         _currentHook.UpdateFishesBag(_capacity);
     }
-
+    
     public void Reload()
     {
         ResetButtons(true);
@@ -123,7 +148,7 @@ public class Rod : MonoBehaviour
         }
         
         _currentHook = filtredHooks[_counter];
-        _camera.GetObject(_currentHook);
+        _camera.GetCurrentHook(_currentHook);
         SetActiveeHook();
     }
 
@@ -134,7 +159,7 @@ public class Rod : MonoBehaviour
             button.gameObject.SetActive(value);
         }
     }
-    
+
     public bool IncreaseDeepLenght(int price)
     {
         if (_player.TryBuyLenght(price))

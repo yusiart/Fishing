@@ -9,18 +9,23 @@ public class CameraMover : MonoBehaviour
 { 
     [SerializeField]private Vector2 _offset = new Vector2(0, 1f);
     [SerializeField]private float _damping = 1.5f;
+    [SerializeField] private List<Fish> _allFishes;
 
     private Hook _hook;
-    //private float _outOfRangeYPos = 10f;
-    // [SerializeField] private List<Fish> _allFishes = new List<Fish>();
+    private float _outOfRangeYPos = 45f;
 
-    void Start ()
+    private void Start ()
     {
         Screen.SetResolution (Screen.width, Screen.height, true);
         _offset = new Vector2(Mathf.Abs(_offset.x), _offset.y);
     }
 
-    void Update()
+    private void FixedUpdate()
+    {
+        CheckFishPosition();
+    }
+
+    private void Update()
     {
         if (_hook != null)
         {
@@ -30,27 +35,28 @@ public class CameraMover : MonoBehaviour
     }
 
 
-    public void GetObject(Hook hook)
+    public void GetCurrentHook(Hook hook)
     {
         _hook = hook;
     }
+    
+    public void AddFish(Fish fish)
+    {
+        _allFishes.Add(fish);
+    }
 
-    // private void CheckFish()
-    // {
-    //     for(int i = 0; i < _fishes.Count; i++)
-    // {
-    //    if(_fishes[i].transform.position.y > 20 \\ _fishes[i].transform.position < 20)
-    //     fish.gameobject.SetActive(false);
-    // }
-    // }
-    //
-    // private void FindAllFishes()
-    // {
-    //     Fish fish;
-    //     
-    //     while (fish = FindObjectOfType<Fish>())
-    //     {
-    //         _allFishes.Add(fish);
-    //     }
-    // }
+    private void CheckFishPosition()
+    {
+        foreach (var fish in _allFishes)
+        {
+            if (transform.position.y - fish.transform.position.y < -_outOfRangeYPos)
+            {
+                fish.gameObject.SetActive(false);
+            }
+            else if(transform.position.y - fish.transform.position.y > _outOfRangeYPos)
+            {
+                fish.gameObject.SetActive(false);
+            }
+        }
+    }
 }

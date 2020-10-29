@@ -9,6 +9,7 @@ using Debug = System.Diagnostics.Debug;
 [RequireComponent(typeof(LineRenderer))]
 [RequireComponent(typeof(Bag))]
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(HookColorChanger))]
 
 public class Hook : MonoBehaviour
 {
@@ -16,57 +17,39 @@ public class Hook : MonoBehaviour
    [SerializeField] private string _name;
    [SerializeField] private Sprite _icon;
    [SerializeField] private Player _player;
-   [SerializeField] private Transform _poolPointContainer;
    [SerializeField] private bool _isBuyed;
-   
+   [SerializeField] private int _number;
+
    private Bag _bag;
    private HookMover _hookMover;
    private SpriteRenderer _renderer;
 
+   public int Number => _number;
    public Player Player => _player;
-
-   public event UnityAction OnCloseCollectPanel;
-
-   // event ? ??  kazdij raz izmnenjat' nuzno
-   [HideInInspector] public bool Retracting;
-   
    public string Name => _name;
    public int Price => _price;
    public bool IsBuyed => _isBuyed;
    public Sprite Icon => _icon;
-
-
+   
+   public event UnityAction OnCloseCollectPanel;
 
    private void OnEnable()
    {
       _bag = GetComponent<Bag>();
       _hookMover = GetComponent<HookMover>();
-      
-      //^^^]]
-      //Retracting = _mover.Retracting;
-
-      OnCloseCollectPanel += _hookMover.ReloadRod; 
-      _isBuyed = PlayerPrefs.GetInt("IsBuyed") == 1 ? true : false;
-      // ResetPoolActivators();
+      OnCloseCollectPanel += _hookMover.ReloadRod;
    }
    
    private void OnDisable()
    {
       OnCloseCollectPanel -= _hookMover.ReloadRod;
    }
-   
-   // private void ResetPoolActivators()
-   // {
-   //    foreach (PoolActivator child in _poolPointContainer.transform) 
-   //    {
-   //       child.SetCurrentHook(this);
-   //    }
-   // }
 
-   public void Unlock()
+   public void UnlockHook(int hookNumber)
    {
       _isBuyed = true;
-      PlayerPrefs.SetInt("IsBuyed", IsBuyed ? 1 : 0);
+       PlayerPrefs.SetInt($"IsBuyed{hookNumber}", _isBuyed ? 1 : 0);
+       PlayerPrefs.Save();
    }
 
    public void TryToSellFishes()
@@ -82,5 +65,13 @@ public class Hook : MonoBehaviour
    public void UpdateFishesBag(int capacity)
    {
       _bag.UpdateFishesBag(capacity);
+   }
+
+   public void CheckBuyedHooks(int hookNumber)
+   {
+      if (PlayerPrefs.HasKey($"IsBuyed{hookNumber}"))
+      {
+         _isBuyed = PlayerPrefs.GetInt($"IsBuyed{hookNumber}") == 1 ? true : false;
+      }
    }
 }

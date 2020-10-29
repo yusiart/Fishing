@@ -20,13 +20,18 @@ public class GameController : MonoBehaviour
     public void OnCollectButtonClick(bool x2Collect)
     {
         _player.ChangeMoneyDisplay(x2Collect);
-        StartCoroutine(ExampleCoroutine());
+        StartCoroutine(WaitForClosePanel());
     }
     
-    IEnumerator ExampleCoroutine()
+    IEnumerator WaitForClosePanel()
     {
         yield return new WaitForSeconds(0.5f);
         
         _rod.CurrentHook.CloseCollectPanel();
+    }
+
+    public void ResetGame()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }

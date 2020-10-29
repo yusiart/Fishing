@@ -10,7 +10,7 @@ public class PoolSpawner : MonoBehaviour
   [SerializeField] private Transform _poolGenerationPoint;
   [SerializeField] private List<GameObject> _pools;
 
-  private float _spaceBetween = 30f;
+  private float _spaceBetween = 35f;
   private float _deepth = 30f;
 
   private void Awake()

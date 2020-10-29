@@ -25,7 +25,12 @@ public class Player : MonoBehaviour
    {
       _text = GetComponent<CollectText>();
       _ads = GetComponent<InitilizeAds>();
-      _money = PlayerPrefs.GetInt("_money");
+      
+      if (PlayerPrefs.HasKey("_money"))
+      {
+         _money = PlayerPrefs.GetInt("_money");
+      }
+      
       OnMoneyChanged?.Invoke(_money);
    }
 
@@ -61,7 +66,7 @@ public class Player : MonoBehaviour
          OnMoneyChanged?.Invoke(_money);
       }
       
-      hook.Unlock();
+      hook.UnlockHook(hook.Number);
    }
 
    public bool TryBuyLenght(int price)

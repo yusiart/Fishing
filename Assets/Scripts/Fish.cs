@@ -8,9 +8,16 @@ public class Fish : MonoBehaviour
 {
     [SerializeField] private int _reward;
     
+    private CameraMover _cameraMover;
     private Spawner _pool;
     
     public int Reward => _reward;
+
+    private void Start()
+    {
+        _cameraMover = FindObjectOfType<CameraMover>();
+        _cameraMover.AddFish(this);
+    }
 
     private void OnEnable()
     {

@@ -8,23 +8,22 @@ using Debug = System.Diagnostics.Debug;
 public class Bag : MonoBehaviour
 {
   [SerializeField] private FishCountDisplay _fishDisplay;
-  
-  private static int _capacity;
-  private HookMover _hook;
-  private List<Fish> _fishes = new List<Fish>();
-  
-  public UnityAction <int, int>  OnFishesCountChanged;
 
+  private static int _fishCapacity;
+  private HookMover _hookMover;
+  private List<Fish> _cachedFishes = new List<Fish>();
+
+  public UnityAction<int, int> OnFishesCountChanged;
 
   private void Start()
   {
-    _hook = GetComponent<HookMover>();
+    _hookMover = GetComponent<HookMover>();
   }
 
   private void OnEnable()
   {
     _fishDisplay.GetBag(this);
-    OnFishesCountChanged?.Invoke(_fishes.Count, _capacity);
+    OnFishesCountChanged?.Invoke(_cachedFishes.Count, _fishCapacity);
   }
 
   private void OnDisable()
@@ -34,42 +33,41 @@ public class Bag : MonoBehaviour
 
   public void UpdateFishesBag(int capacity)
   {
-    _capacity = capacity;
-    OnFishesCountChanged?.Invoke(_fishes.Count, _capacity);
+    _fishCapacity = capacity;
+    OnFishesCountChanged?.Invoke(_cachedFishes.Count, _fishCapacity);
   }
 
   public bool TryToAddFish(Fish fish)
   {
-     if (_fishes.Count < _capacity)
+    if (_cachedFishes.Count < _fishCapacity)
     {
-      _fishes.Add(fish);
-      fish.transform.position = new Vector2(this.transform.position.x,this.transform.position.y -1.3f);
-      fish.transform.SetParent(this.transform);
-      OnFishesCountChanged?.Invoke(_fishes.Count, _capacity);
-      
-      if (_fishes.Count == _capacity)
+      _cachedFishes.Add(fish);
+      fish.transform.position = new Vector2(transform.position.x, transform.position.y - 1.3f);
+      fish.transform.SetParent(transform);
+      OnFishesCountChanged?.Invoke(_cachedFishes.Count, _fishCapacity);
+
+      if (_cachedFishes.Count == _fishCapacity)
       {
-        _hook.EndCachingFishes();
+        _hookMover.EndCachingFishes();
       }
-      
+
       return true;
     }
-     
+
     return false;
   }
 
   public void TryToSellFishes(Player player)
   {
-    if (_fishes.Count > 0)
+    if (_cachedFishes.Count > 0)
     {
-      foreach (var fish in _fishes)
+      foreach (var fish in _cachedFishes)
       {
         fish.SellFish(player);
       }
-      
-      _fishes = new List<Fish>();
-      OnFishesCountChanged?.Invoke(_fishes.Count, _capacity);
+
+      _cachedFishes = new List<Fish>();
+      OnFishesCountChanged?.Invoke(_cachedFishes.Count, _fishCapacity);
     }
   }
-  
 }

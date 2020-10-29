@@ -6,15 +6,15 @@ using UnityEngine.Advertisements;
 public class InitilizeAds : MonoBehaviour
 {
     string gameId = "3869419";
-    bool testMode = true;
+    bool testMode = false;
 
     private void Start ()
     {
         Advertisement.Initialize (gameId, testMode);
     }
     
-    public void ShowInterstitialAd() {
-        // Check if UnityAds ready before calling Show method:
+    public void ShowInterstitialAd() 
+    {
         if (Advertisement.IsReady()) 
         {
             Advertisement.Show();

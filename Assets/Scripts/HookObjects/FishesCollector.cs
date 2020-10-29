@@ -7,7 +7,7 @@ using Debug = System.Diagnostics.Debug;
 public class FishesCollector : MonoBehaviour
 {
     private Bag _bag;
-    private bool _isFishing = true;
+    private bool _canFishing;
 
     private void OnEnable()
     {
@@ -16,12 +16,12 @@ public class FishesCollector : MonoBehaviour
 
     public void ChangeIsFishing(bool isFishing)
     {
-        _isFishing = isFishing;
+        _canFishing = isFishing;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent<Fish>(out Fish fish) &&  _isFishing)
+        if (collision.gameObject.TryGetComponent<Fish>(out Fish fish) && _canFishing)
         {
             if (_bag.TryToAddFish(fish))
             {

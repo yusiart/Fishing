@@ -7,12 +7,18 @@ public class UpdateButtonParametrs : MonoBehaviour
 {
     [SerializeField] private Text _price;
     [SerializeField] private Rod _rod;
+    [SerializeField] private int price;
+    [SerializeField] private int _number;
 
-    private int price = 20;
+    private SpriteRenderer _renderer;
 
     private void Start()
     {
-        price = PlayerPrefs.GetInt("price");
+        if (PlayerPrefs.HasKey($"price{_number}"))
+        {
+            price = PlayerPrefs.GetInt($"price{_number}");
+        }
+
         _price.text = price.ToString();
     }
     
@@ -38,6 +44,6 @@ public class UpdateButtonParametrs : MonoBehaviour
     {
         price = (int)(price * 1.8f);
         _price.text = price.ToString();
-        PlayerPrefs.SetInt("price", price);
+        PlayerPrefs.SetInt($"price{_number}", price);
     }
 }

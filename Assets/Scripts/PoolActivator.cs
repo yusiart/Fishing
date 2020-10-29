@@ -11,8 +11,6 @@ public class PoolActivator : MonoBehaviour
 {
     [SerializeField] private Spawner _spawner;
 
-    private Hook _currentHook;
-
     private void Start()
     {
         _spawner = GetComponent<Spawner>();
@@ -20,22 +18,9 @@ public class PoolActivator : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent<Hook>(out Hook hook))// && _currentHook.Retracting == false)
+        if (collision.gameObject.TryGetComponent<Hook>(out Hook hook))
         {
             _spawner.TryActivateFishes();
         }
-    }
-
-    // private void OnTriggerExit2D(Collider2D collision)
-    // {
-    //     if (collision.gameObject.TryGetComponent<Hook>(out Hook hook))// && _currentHook.Retracting)
-    //     {
-    //         _spawner.OffFihses();
-    //     }
-    // }
-
-    public void SetCurrentHook(Hook hook)
-    {
-        _currentHook = hook;
     }
 }

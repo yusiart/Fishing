@@ -1,4 +1,0 @@
-#Thu Oct 22 12:46:29 EEST 2020
-base.0=/Users/yuravishnyakov/Projects/SeaFishing/Temp/gradleOut/launcher/build/intermediates/transforms/dexMerger/release/0
-path.0=classes.dex
-renamed.0=classes.dex

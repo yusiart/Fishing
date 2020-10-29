@@ -17,11 +17,9 @@ public class HookMover : MonoBehaviour
     private LineRenderer _lineRenderer;
     private bool _retracting;
     private bool _canMove;
-    private float _accelerationCount = 4;
+    private float _accelerationCount = 6;
     private float _currentSpeed;
     private bool _isBagSpaceEnough;
-
-    public bool Retracting => _retracting;
 
     private void Awake()
     {
@@ -111,15 +109,6 @@ public class HookMover : MonoBehaviour
         
         _target = _origin.transform.position;
     }
-
-    // private void OnCollisionEnter2D(Collision2D collision)
-    // {
-    //     // ne rabotaet stolknovenie
-    //     if (collision.gameObject.TryGetComponent<Player>(out Player player))
-    //     {
-    //         EndCachingFishes();
-    //     }
-    // }
 
     public void ReloadRod()
     {
