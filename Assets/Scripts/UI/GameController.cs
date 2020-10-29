@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -6,8 +7,14 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] private Rod _rod;
-    [SerializeField] private Player _player;
+    private Rod _rod;
+    private Player _player;
+
+    private void Start()
+    {
+        _rod = FindObjectOfType<Rod>();
+        _player = FindObjectOfType<Player>();
+    }
 
     public void OnChangeHookButtonClick()
     {

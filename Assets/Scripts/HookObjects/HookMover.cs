@@ -7,18 +7,18 @@ using UnityEngine.Events;
 public class HookMover : MonoBehaviour
 {
     [SerializeField] private Transform _origin;
-    [SerializeField] private Rod _rod;
     [SerializeField] private GameObject _endFishingCollectPanel;
 
+    private Rod _rod;
     private float _startSpeed = 8f;
     private FishesCollector _collector;
     private Hook _hook;
     private Vector3 _target;
     private LineRenderer _lineRenderer;
-    private bool _retracting;
-    private bool _canMove;
     private float _accelerationCount = 6;
     private float _currentSpeed;
+    private bool _retracting;
+    private bool _canMove;
     private bool _isBagSpaceEnough;
 
     private void Awake()
@@ -27,14 +27,24 @@ public class HookMover : MonoBehaviour
         _hook = GetComponent<Hook>();
         _currentSpeed = _startSpeed;
         _collector = GetComponent<FishesCollector>();
+        _rod = FindObjectOfType<Rod>();
     }
-    
+
     private void OnEnable()
     {
         _collector.ChangeIsFishing(false);
     }
 
     private void FixedUpdate()
+    {
+        if (_canMove)
+            Move();
+
+        if (_retracting && _isBagSpaceEnough)
+            MousePositionFollow();
+    }
+
+    private void Update()
     {
         if (Math.Abs(gameObject.transform.position.y - _target.y) < 0.01f && !_retracting)
         {
@@ -44,15 +54,6 @@ public class HookMover : MonoBehaviour
         {
             EndFishing();
         }
-    }
-
-    private void Update()
-    {
-        if (_canMove)
-            Move();
-        
-        if (_retracting && _isBagSpaceEnough)
-            MousePositionFollow();
     }
 
     private void Move()
@@ -74,7 +75,7 @@ public class HookMover : MonoBehaviour
         ChangeFishingValues(false);
         _endFishingCollectPanel.SetActive(true);
         _rod.Player.SetText();
-        _target = new Vector3(0,0,0);
+        _target = new Vector3(0, 0, 0);
     }
 
     private void ChangeFishingValues(bool value)
@@ -82,7 +83,7 @@ public class HookMover : MonoBehaviour
         _collector.ChangeIsFishing(value);
         _retracting = value;
         _isBagSpaceEnough = value;
-   
+
         ResetSpeed();
     }
 
@@ -98,7 +99,7 @@ public class HookMover : MonoBehaviour
             poss.x = touchPos.x;
             transform.position = poss;
         }
-        
+
         _target = _origin.transform.position;
 #endif
 
@@ -106,7 +107,7 @@ public class HookMover : MonoBehaviour
         Vector3 position = transform.position;
         position.x = vector.x;
         transform.position = position;
-        
+
         _target = _origin.transform.position;
     }
 

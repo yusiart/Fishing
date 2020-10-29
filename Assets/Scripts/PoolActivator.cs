@@ -9,7 +9,7 @@ using Debug = System.Diagnostics.Debug;
 
 public class PoolActivator : MonoBehaviour
 {
-    [SerializeField] private Spawner _spawner;
+    private Spawner _spawner;
 
     private void Start()
     {

@@ -222,10 +222,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c63a0000
-      m_LastClickedID: 15046
-      m_ExpandedIDs: 96e7ecffa0e7ecff0a08edff1808edff5c08edff6008edff6a08edffa82aedffac2aedffb62aedffbe1eeeffcc1eeeff6a45f0ff7445f0ff0e86f0ff1886f0ffe6f1f0ff5412f1ff2e92fbff6af7fdff5efbffff763a0000143b0000a63b0000d43b0000e23b0000203c0000343c0000643c00006c3c0000983c0000183d0000
+      scrollPos: {x: 0, y: 544}
+      m_SelectedIDs: 3ed3f9ff
+      m_LastClickedID: -404674
+      m_ExpandedIDs: 96e7ecffa0e7ecff0a08edff1808edff5c08edff6008edff6a08edffa82aedffac2aedffb62aedffbe1eeeffcc1eeeff6a45f0ff7445f0ff0e86f0ff1886f0ffe6f1f0ff5412f1ff2e92fbff6af7fdff5efbffffa63b0000d43b0000e23b0000143c0000203c0000343c0000643c00006c3c0000983c0000063d0000183d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -313,9 +313,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.0192578, y: -91.27364, z: -4228.874}
+    m_Target: {x: -2.983673, y: -556.57526, z: -7352.975}
     speed: 2
-    m_Value: {x: -2.0192578, y: -91.27364, z: -4228.874}
+    m_Value: {x: -2.983673, y: -556.57526, z: -7352.975}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -365,9 +365,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 9.431577
+    m_Target: 11.134639
     speed: 2
-    m_Value: 9.431577
+    m_Value: 11.134639
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 15046
+  m_LastSelectedObjectID: -912594
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -630,20 +630,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Prefabs/FishPrefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Prefabs/FishPrefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/yuravishnyakov/Projects/SeaFishing
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: e0410000
-    m_LastClickedID: 16864
-    m_ExpandedIDs: 00000000e041000000ca9a3b
+    scrollPos: {x: 0, y: 62}
+    m_SelectedIDs: ec520000
+    m_LastClickedID: 21228
+    m_ExpandedIDs: 00000000e0410000f441000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -696,10 +696,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: c63a0000
-    m_LastClickedInstanceID: 15046
+    m_SelectedInstanceIDs: 3ed3f9ff
+    m_LastClickedInstanceID: -404674
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000363d0000e83b0000343c0000083c0000c8380000ac3c0000d43c0000704d000002510000ce3a00009e6000009a6000009260000008600000ea380000884d000022450000024600007a410000ea410000ca430000d2430000b643000058430000e8420000d6420000a88200007a8200009a8200009e820000be430000ee41000092c8010084870000f6410000ba430000c63a0000e44100007c3f0000a83e0000043e00000041000046af000064b20000503e0000c4730000000000006073000088410000
+    m_ExpandedInstanceIDs: c6230000363d0000e83b0000343c0000083c0000c8380000ac3c0000d43c0000704d000002510000ce3a00009e6000009a6000009260000008600000ea380000884d000022450000024600007a410000ea410000ca430000d2430000b643000058430000e8420000d6420000a88200007a8200009a8200009e820000be430000ee41000092c8010084870000f6410000ba430000c63a0000e44100007c3f0000a83e0000043e00000041000046af000064b20000503e0000c47300000000000060730000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -791,7 +791,7 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 255.74158
+  m_LastVerticalScrollValue: 0
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52

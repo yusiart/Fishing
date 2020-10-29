@@ -11,19 +11,18 @@ public class Player : MonoBehaviour
 
    private int _sumReward;
    private InitilizeAds _ads;
-   private CollectText _text;
+   private CollectText _collectText;
 
    public int Money
    {
       get => _money;
    }
-
+   
    public event UnityAction<int> OnMoneyChanged;
-
-
+   
    private void Start()
    {
-      _text = GetComponent<CollectText>();
+      _collectText = GetComponent<CollectText>();
       _ads = GetComponent<InitilizeAds>();
       
       if (PlayerPrefs.HasKey("_money"))
@@ -79,7 +78,7 @@ public class Player : MonoBehaviour
       return false;
    }
 
-   public bool TryToBuyCapacity(int price)
+   public bool TryBuyCapacity(int price)
    {
       if (TrySpendMoney(price))
       {
@@ -90,7 +89,7 @@ public class Player : MonoBehaviour
    }
    public void SetText()
    {
-      _text.SetText(_sumReward);
+      _collectText.SetText(_sumReward);
    }
 
    public void SaveMoney()

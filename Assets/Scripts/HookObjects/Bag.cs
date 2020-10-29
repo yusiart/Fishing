@@ -22,7 +22,7 @@ public class Bag : MonoBehaviour
 
   private void OnEnable()
   {
-    _fishDisplay.GetBag(this);
+    _fishDisplay.SetBag(this);
     OnFishesCountChanged?.Invoke(_cachedFishes.Count, _fishCapacity);
   }
 

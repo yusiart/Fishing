@@ -11,18 +11,17 @@ using Debug = System.Diagnostics.Debug;
 public class Rod : MonoBehaviour
 {
     [SerializeField]private List<Hook> _hooks;
-    [SerializeField] private CameraMover _camera;
     [SerializeField] private List<Image> _images;
 
-    private float _depth = -250;
+    private CameraMover _camera;
+    private float _depth = -30;
     private Hook _currentHook;
     private bool _isShooting;
     private int _capacity = 3;
     private int _counter;
     private Player _player;
     private int _maxDeepth = -900;
-    private LayerMask _waterLayer;
-    
+
     public Player Player => _player;
     public bool IsShooting => _isShooting;
     public Hook CurrentHook => _currentHook;
@@ -47,6 +46,7 @@ public class Rod : MonoBehaviour
 
     private void Start()
     {
+        _camera = FindObjectOfType<CameraMover>();
 
         SetHook();
         
@@ -60,7 +60,7 @@ public class Rod : MonoBehaviour
 
     private void Update()
     {
-        
+
 #if UNITY_ANDROID
         
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && !_isShooting)
@@ -148,7 +148,7 @@ public class Rod : MonoBehaviour
         }
         
         _currentHook = filtredHooks[_counter];
-        _camera.GetCurrentHook(_currentHook);
+        _camera.SetCurrentHook(_currentHook);
         SetActiveeHook();
     }
 
@@ -183,7 +183,7 @@ public class Rod : MonoBehaviour
     
     public bool EnlargeCapacity(int price)
     {
-        if (_player.TryToBuyCapacity(price))
+        if (_player.TryBuyCapacity(price))
         {
             _capacity += 1;
             PlayerPrefs.SetInt("_capacity" , _capacity);

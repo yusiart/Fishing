@@ -22,11 +22,6 @@ public class CameraMover : MonoBehaviour
 
     private void FixedUpdate()
     {
-        CheckFishPosition();
-    }
-
-    private void Update()
-    {
         if (_hook != null)
         {
             Vector3 target = new Vector3(0, _hook.transform.position.y + _offset.y, transform.position.z);
@@ -34,8 +29,12 @@ public class CameraMover : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        CheckFishPosition();
+    }
 
-    public void GetCurrentHook(Hook hook)
+    public void SetCurrentHook(Hook hook)
     {
         _hook = hook;
     }

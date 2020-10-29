@@ -193,7 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1327556b80a7b4cd7b6b8ecbbb63287f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawner: {fileID: 0}
 --- !u!114 &852953340435685897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _container: {fileID: 7022926535870808985}
-  _capacity: 10
+  _capacity: 6
   pool: []
   _prefabs: []
   _spawnPointsContainer: {fileID: 7022926535664432101}

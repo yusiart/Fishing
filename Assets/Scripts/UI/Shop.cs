@@ -8,11 +8,15 @@ public class Shop : MonoBehaviour
     [SerializeField] private List<Hook> _hooks;
     [SerializeField] private GameObject _container;
     [SerializeField] private HookView _template;
-    [SerializeField] private Player _player;
-    [SerializeField] private Rod _rod;
-    
+
+    private Rod _rod;
+    private Player _player;
+
     private void Start()
     {
+        _player = FindObjectOfType<Player>();
+        _rod = FindObjectOfType<Rod>();
+
         for (int i = 0; i < _hooks.Count; i++)
         {
             AddHook(_hooks[i]);
@@ -25,7 +29,6 @@ public class Shop : MonoBehaviour
         item.SellButtonClick += OnSellButtonClick;
         item.Render(hook);
     }
-    
 
     private void OnSellButtonClick(Hook hook, HookView view, bool buyForAds)
     {
@@ -36,11 +39,11 @@ public class Shop : MonoBehaviour
     {
         if (buyForAds)
         {
-            BuyHook(hook, view,buyForAds);
+            BuyHook(hook, view, buyForAds);
         }
         else if (_player.Money >= hook.Price)
         {
-            BuyHook(hook, view,buyForAds);
+            BuyHook(hook, view, buyForAds);
         }
     }
 
