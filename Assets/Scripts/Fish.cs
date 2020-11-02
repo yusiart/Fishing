@@ -17,13 +17,9 @@ public class Fish : MonoBehaviour
     {
         _cameraMover = FindObjectOfType<CameraMover>();
         _cameraMover.AddFish(this);
-    }
-
-    private void OnEnable()
-    {
         _pool = FindObjectOfType<Spawner>();
     }
-
+    
     public void SellFish(Player player)
     {
         player.SellFish(this);

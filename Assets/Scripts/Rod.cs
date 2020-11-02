@@ -3,10 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using Debug = System.Diagnostics.Debug;
 
 public class Rod : MonoBehaviour
 {
@@ -14,13 +12,13 @@ public class Rod : MonoBehaviour
     [SerializeField] private List<Image> _images;
 
     private CameraMover _camera;
-    private float _depth = -30;
+    private float _depth = -70;
     private Hook _currentHook;
     private bool _isShooting;
-    private int _capacity = 3;
+    private int _capacity = 5;
     private int _counter;
     private Player _player;
-    private int _maxDeepth = -900;
+    private int _maxDeepth = -870;
 
     public Player Player => _player;
     public bool IsShooting => _isShooting;

@@ -44,7 +44,7 @@ public class UpdateButtonParametrs : MonoBehaviour
 
     private void UpdatePrice()
     {
-        price = (int)(price * 1.8f);
+        price = (int)(price * 1.5f);
         _price.text = price.ToString();
         PlayerPrefs.SetInt($"price{_number}", price);
     }

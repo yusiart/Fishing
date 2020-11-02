@@ -10,12 +10,12 @@ public class HookMover : MonoBehaviour
     [SerializeField] private GameObject _endFishingCollectPanel;
 
     private Rod _rod;
-    private float _startSpeed = 8f;
+    private float _startSpeed = 6f;
     private FishesCollector _collector;
     private Hook _hook;
     private Vector3 _target;
     private LineRenderer _lineRenderer;
-    private float _accelerationCount = 6;
+    private float _accelerationCount = 9f;
     private float _currentSpeed;
     private bool _retracting;
     private bool _canMove;
@@ -107,7 +107,7 @@ public class HookMover : MonoBehaviour
         Vector3 position = transform.position;
         position.x = vector.x;
         transform.position = position;
-
+        
         _target = _origin.transform.position;
     }
 

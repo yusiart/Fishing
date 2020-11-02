@@ -42,7 +42,7 @@ public class Bag : MonoBehaviour
     if (_cachedFishes.Count < _fishCapacity)
     {
       _cachedFishes.Add(fish);
-      fish.transform.position = new Vector2(transform.position.x, transform.position.y - 1.3f);
+      fish.transform.position = new Vector2(transform.position.x, transform.position.y - 1.1f);
       fish.transform.SetParent(transform);
       OnFishesCountChanged?.Invoke(_cachedFishes.Count, _fishCapacity);
 

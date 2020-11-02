@@ -104,9 +104,8 @@ MonoBehaviour:
   _name: Warm
   _icon: {fileID: 21300000, guid: b2613f60fce754120a1b0c1b70cb6330, type: 3}
   _player: {fileID: 0}
-  _poolPointContainer: {fileID: 0}
   _isBuyed: 0
-  Retracting: 0
+  _number: 0
 --- !u!114 &5997526742487454633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,8 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _origin: {fileID: 0}
-  _rod: {fileID: 0}
-  _collectPanel: {fileID: 0}
+  _endFishingCollectPanel: {fileID: 0}
 --- !u!114 &5997526742047926060
 MonoBehaviour:
   m_ObjectHideFlags: 0

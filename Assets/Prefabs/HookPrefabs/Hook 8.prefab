@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7515253638188500189, guid: f9d80dab131bc4ae1bef13d8c2e5267c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -105,9 +105,8 @@ MonoBehaviour:
   _name: 
   _icon: {fileID: 7515253638188500189, guid: f9d80dab131bc4ae1bef13d8c2e5267c, type: 3}
   _player: {fileID: 0}
-  _poolPointContainer: {fileID: 0}
   _isBuyed: 0
-  Retracting: 0
+  _number: 0
 --- !u!114 &7709374826197563951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,8 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _origin: {fileID: 0}
-  _rod: {fileID: 0}
-  _collectPanel: {fileID: 0}
+  _endFishingCollectPanel: {fileID: 0}
 --- !u!60 &190237901994447032
 PolygonCollider2D:
   m_ObjectHideFlags: 0

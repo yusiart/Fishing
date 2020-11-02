@@ -32,7 +32,7 @@ public class Hook : MonoBehaviour
    public Sprite Icon => _icon;
    
    public event UnityAction OnCloseCollectPanel;
-
+   
    private void OnEnable()
    {
       _bag = GetComponent<Bag>();

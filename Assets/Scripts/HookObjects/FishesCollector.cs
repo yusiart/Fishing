@@ -8,8 +8,8 @@ public class FishesCollector : MonoBehaviour
 {
     private Bag _bag;
     private bool _canFishing;
-
-    private void OnEnable()
+    
+    private void Start()
     {
         _bag = GetComponent<Bag>();
     }

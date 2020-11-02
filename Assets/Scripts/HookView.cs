@@ -17,10 +17,15 @@ public class HookView : MonoBehaviour
     private InitilizeAds _ads;
     private Hook _hook;
     public UnityAction<Hook, HookView, bool> SellButtonClick;
-    
-    private void OnEnable()
+
+
+    private void Start()
     {
         _ads = GetComponent<InitilizeAds>();
+    }
+
+    private void OnEnable()
+    {
         _buyButton.onClick.AddListener(OnBuyButton);
         _buyButton.onClick.AddListener(TryToLockHook);
         _buyForWatchButton.onClick.AddListener(OnBuyForWatchButtonClick);

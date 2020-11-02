@@ -105,9 +105,8 @@ MonoBehaviour:
   _name: 
   _icon: {fileID: 3488930789707246793, guid: 15132fbffff6a47f285459aec345ded5, type: 3}
   _player: {fileID: 0}
-  _poolPointContainer: {fileID: 0}
   _isBuyed: 0
-  Retracting: 0
+  _number: 0
 --- !u!114 &4641805640573333530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,8 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _origin: {fileID: 0}
-  _rod: {fileID: 0}
-  _collectPanel: {fileID: 0}
+  _endFishingCollectPanel: {fileID: 0}
 --- !u!114 &4641805640573333528
 MonoBehaviour:
   m_ObjectHideFlags: 0
