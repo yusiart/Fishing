@@ -9,7 +9,7 @@ public class CameraMover : MonoBehaviour
 { 
     [SerializeField]private Vector2 _offset = new Vector2(0, 1f);
     [SerializeField]private float _damping = 1.5f;
-    [SerializeField] private List<Fish> _allFishes;
+    [SerializeField] private List<Spawner> _allSpawners;
 
     private Hook _hook;
     private float _outOfRangeYPos = 45f;
@@ -39,22 +39,22 @@ public class CameraMover : MonoBehaviour
         _hook = hook;
     }
     
-    public void AddFish(Fish fish)
+    public void AddPool(Spawner spawner)
     {
-        _allFishes.Add(fish);
+        _allSpawners.Add(spawner);
     }
 
     private void CheckFishPosition()
     {
-        foreach (var fish in _allFishes)
+        foreach (var pool in _allSpawners)
         {
-            if (transform.position.y - fish.transform.position.y < -_outOfRangeYPos)
+            if (Vector2.Distance(this.transform.position, pool.transform.position) < _outOfRangeYPos)
             {
-                fish.gameObject.SetActive(false);
+                pool.gameObject.SetActive(true);
             }
-            else if(transform.position.y - fish.transform.position.y > _outOfRangeYPos)
+            else
             {
-                fish.gameObject.SetActive(false);
+                pool.gameObject.SetActive(false);
             }
         }
     }

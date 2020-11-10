@@ -229,7 +229,7 @@ ScriptsOnlyBuild:
     className: BannerPlaceholder
   - hash:
       serializedVersion: 2
-      Hash: 383767606ead54cc451be52aaf402f6d
+      Hash: 6cf91d7772064462f5e76833b21c205c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraMover
@@ -589,7 +589,7 @@ ScriptsOnlyBuild:
     className: ObjectPool
   - hash:
       serializedVersion: 2
-      Hash: 3cf156985df62fac63708d6bed3583bf
+      Hash: 30fa9b5b1a06a7e2e1b0e265c74664c9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FishMover

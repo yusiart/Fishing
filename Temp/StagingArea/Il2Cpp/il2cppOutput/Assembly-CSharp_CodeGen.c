@@ -1,0 +1,719 @@
+﻿#include "il2cpp-config.h"
+
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+IL2CPP_EXTERN_C_BEGIN
+IL2CPP_EXTERN_C_END
+
+
+
+
+// 0x00000001 System.Void CameraMover::Start()
+extern void CameraMover_Start_m26184D345ECDD5759D0930743AED2847EEA28147 ();
+// 0x00000002 System.Void CameraMover::FixedUpdate()
+extern void CameraMover_FixedUpdate_mDE047F791E3BCB6B86745F817287839787916ED2 ();
+// 0x00000003 System.Void CameraMover::Update()
+extern void CameraMover_Update_m1319670F431E86D6E7B40E5D5A7AE8CEF70CF695 ();
+// 0x00000004 System.Void CameraMover::SetCurrentHook(Hook)
+extern void CameraMover_SetCurrentHook_m70C10A2C4947D443692CB7019453AB91A6979CEB ();
+// 0x00000005 System.Void CameraMover::AddPool(Spawner)
+extern void CameraMover_AddPool_m3CA61A472B04A09FA365B5A6EE8C79A9C3B93DE9 ();
+// 0x00000006 System.Void CameraMover::CheckFishPosition()
+extern void CameraMover_CheckFishPosition_m68130F59110245DB754163208B3FB6328986C318 ();
+// 0x00000007 System.Void CameraMover::.ctor()
+extern void CameraMover__ctor_m49C866C78A9069E7A837D5CC54389B5A5E023385 ();
+// 0x00000008 UnityEngine.Color ColorChangePoint::get_Color()
+extern void ColorChangePoint_get_Color_m31676B8513F26845D132E2E46742632FC816C38B ();
+// 0x00000009 System.Void ColorChangePoint::.ctor()
+extern void ColorChangePoint__ctor_m5A7AA60169BC470DE97AA616DF8725E580A097AA ();
+// 0x0000000A System.Void ColorChanger::Start()
+extern void ColorChanger_Start_mE52BCF87BF7B6F66F34F00745BD3645C3ECF4034 ();
+// 0x0000000B System.Void ColorChanger::Update()
+extern void ColorChanger_Update_m40FB069A36003D054ABDE347F138261680931FEA ();
+// 0x0000000C System.Void ColorChanger::ChangeBackgroundColor()
+extern void ColorChanger_ChangeBackgroundColor_m8D706A2B4169DFA984151456955E188C7B76A7AE ();
+// 0x0000000D System.Void ColorChanger::SetTargetColor(UnityEngine.Color)
+extern void ColorChanger_SetTargetColor_m00AC83C61B9E0BEA6EEB16798402150CD1CCFF6B ();
+// 0x0000000E System.Void ColorChanger::.ctor()
+extern void ColorChanger__ctor_mE7BDE2F5AB9D2124FACA897BDB58F5A75D7E8ED8 ();
+// 0x0000000F System.Int32 Fish::get_Reward()
+extern void Fish_get_Reward_m1F7023DBDB2BF1D894564320C265A1550A495724 ();
+// 0x00000010 System.Void Fish::Start()
+extern void Fish_Start_m5CFF30F848FEB960857AE41FB2B1F88DF199C692 ();
+// 0x00000011 System.Void Fish::SellFish(Player)
+extern void Fish_SellFish_m2171C078DC286E3A8ED9F71BEB7495452A4D9D65 ();
+// 0x00000012 System.Void Fish::.ctor()
+extern void Fish__ctor_m046CC304063AA00E1DF395DDA23B36F7B6D1152A ();
+// 0x00000013 System.Void FishMover::OnEnable()
+extern void FishMover_OnEnable_mA6B80D4D44659D14C74DA140B956F0D9CD850E43 ();
+// 0x00000014 System.Void FishMover::Awake()
+extern void FishMover_Awake_m16E259AFB93605386798CA498304CE000441F655 ();
+// 0x00000015 System.Void FishMover::Update()
+extern void FishMover_Update_m1425FCCAB9F0BC62000AF113B171E05B970AAA68 ();
+// 0x00000016 System.Void FishMover::SetStartSettings()
+extern void FishMover_SetStartSettings_mAE4C1284A7C15ADC6D5157973B18D9B458FA70FB ();
+// 0x00000017 System.Void FishMover::Move()
+extern void FishMover_Move_m9CE7E76CBA3187706C535DD7C62B0ABC6FC57382 ();
+// 0x00000018 System.Void FishMover::CheckXPosition()
+extern void FishMover_CheckXPosition_m282629BEB9C05C5839CE7919C08B8B4375268910 ();
+// 0x00000019 UnityEngine.Vector2 FishMover::ChangeDirection(System.Single)
+extern void FishMover_ChangeDirection_mB31D1B79564A61B7505B62BA8CA58C8485BA4C48 ();
+// 0x0000001A System.Void FishMover::Spin()
+extern void FishMover_Spin_m4ED40C025645B581AEEE3EC1ECD06510D7C2466B ();
+// 0x0000001B System.Void FishMover::Hooked()
+extern void FishMover_Hooked_mA57DC524EE05CE556584E33BC0AE7A12DB156440 ();
+// 0x0000001C System.Void FishMover::.ctor()
+extern void FishMover__ctor_mCF65BF653099C5C266273561F35D81AADB8C25F1 ();
+// 0x0000001D System.Void Bag::Start()
+extern void Bag_Start_m371E643A725B7E9F8F7B54DFF6E46790D560790F ();
+// 0x0000001E System.Void Bag::OnEnable()
+extern void Bag_OnEnable_m4C4398CCB6BEFBC9C0645CC783EF8E7DAE6B4011 ();
+// 0x0000001F System.Void Bag::OnDisable()
+extern void Bag_OnDisable_m6C7ED2FD683E495200BAFA66E1FBC808E1DAAD62 ();
+// 0x00000020 System.Void Bag::UpdateFishesBag(System.Int32)
+extern void Bag_UpdateFishesBag_mB1BA4AAB174BB8554DB8C926908CCE4408FD7AF4 ();
+// 0x00000021 System.Boolean Bag::TryToAddFish(Fish)
+extern void Bag_TryToAddFish_mF7CC8A2516120E1FDBEEC29DDF898573F37BADA2 ();
+// 0x00000022 System.Void Bag::TryToSellFishes(Player)
+extern void Bag_TryToSellFishes_m21AC6DF1500B8C03044BA69EB3C26FE3AC498CE6 ();
+// 0x00000023 System.Void Bag::.ctor()
+extern void Bag__ctor_m5A0F5D2CAF63BB9E56ABA3C2FF7AFF863351A86D ();
+// 0x00000024 System.Void FishesCollector::Start()
+extern void FishesCollector_Start_mF4D94166DCFA42C742EC147B7A38020B1E79C646 ();
+// 0x00000025 System.Void FishesCollector::ChangeIsFishing(System.Boolean)
+extern void FishesCollector_ChangeIsFishing_m6BFCF4D4AEBDB95038021877C3EBCFCAEE5C5A45 ();
+// 0x00000026 System.Void FishesCollector::OnTriggerEnter2D(UnityEngine.Collider2D)
+extern void FishesCollector_OnTriggerEnter2D_m505D8C3332C33D7743C82E09DC243BE9A92BCB2B ();
+// 0x00000027 System.Void FishesCollector::.ctor()
+extern void FishesCollector__ctor_m5411943873548708A081199EA59C16F71DB24188 ();
+// 0x00000028 System.Int32 Hook::get_Number()
+extern void Hook_get_Number_m4AFBD3D3EB6A18E2AF31BC3F8EE5C86CF9C77382 ();
+// 0x00000029 Player Hook::get_Player()
+extern void Hook_get_Player_m01B58B87165EAB0BBAEC93FF5BD3AA4E7ABACBD6 ();
+// 0x0000002A System.String Hook::get_Name()
+extern void Hook_get_Name_mB6C12A1405E2A6CA253FC63E4CB7CCA9A28C368D ();
+// 0x0000002B System.Int32 Hook::get_Price()
+extern void Hook_get_Price_m73490B615B72B7E345371C521A20FE4B600817FA ();
+// 0x0000002C System.Boolean Hook::get_IsBuyed()
+extern void Hook_get_IsBuyed_mA98C9F19CE48A8EA5A49F248BB0DC8696D0977D5 ();
+// 0x0000002D UnityEngine.Sprite Hook::get_Icon()
+extern void Hook_get_Icon_mBA772E059711643E54024CC8730B2507B5BE879D ();
+// 0x0000002E System.Void Hook::add_OnCloseCollectPanel(UnityEngine.Events.UnityAction)
+extern void Hook_add_OnCloseCollectPanel_m1F14F5C0AC9A06545596D0FE04EE88FE11A849C6 ();
+// 0x0000002F System.Void Hook::remove_OnCloseCollectPanel(UnityEngine.Events.UnityAction)
+extern void Hook_remove_OnCloseCollectPanel_mD043F6D8FE7FDDBE30A077D97F2A31919BE4619F ();
+// 0x00000030 System.Void Hook::OnEnable()
+extern void Hook_OnEnable_m9598D25DDFFA64ACACAA73F9BA6B9F5C66D6075F ();
+// 0x00000031 System.Void Hook::OnDisable()
+extern void Hook_OnDisable_m5C33D19E674AD57048D486AF6C1A4C639382785E ();
+// 0x00000032 System.Void Hook::UnlockHook(System.Int32)
+extern void Hook_UnlockHook_mE04D26A654EC1176163A1DE55CCC6FB75B3CF8B8 ();
+// 0x00000033 System.Void Hook::TryToSellFishes()
+extern void Hook_TryToSellFishes_m00A68C072AC6807C19F2001F49D8D04309CB4B3A ();
+// 0x00000034 System.Void Hook::CloseCollectPanel()
+extern void Hook_CloseCollectPanel_m2470E388652AB5FA3AEC2E675C9A5FB20D6B916B ();
+// 0x00000035 System.Void Hook::UpdateFishesBag(System.Int32)
+extern void Hook_UpdateFishesBag_mF5C7161355C91F298C5ABCAB2B527EABED59E7FC ();
+// 0x00000036 System.Void Hook::CheckBuyedHooks(System.Int32)
+extern void Hook_CheckBuyedHooks_m4A3F47DBC81D7CE5C929108D1E654FB7B5E7D063 ();
+// 0x00000037 System.Void Hook::.ctor()
+extern void Hook__ctor_m207B21B789CA74544A035831C115232CF7052E53 ();
+// 0x00000038 System.Void HookColorChanger::Start()
+extern void HookColorChanger_Start_mA591353FE08E0CA908D86F51A07FFA36EB215782 ();
+// 0x00000039 System.Void HookColorChanger::OnTriggerEnter2D(UnityEngine.Collider2D)
+extern void HookColorChanger_OnTriggerEnter2D_m5F427502A592B461C4A3A972289F03B7C95B5DF6 ();
+// 0x0000003A System.Void HookColorChanger::.ctor()
+extern void HookColorChanger__ctor_mCD018205478689454D571941530EEB367E7C0BC3 ();
+// 0x0000003B System.Void HookMover::Awake()
+extern void HookMover_Awake_mE604C473302D8853CBDC4B99C6FFE6FC39D9424A ();
+// 0x0000003C System.Void HookMover::OnEnable()
+extern void HookMover_OnEnable_m5474725BE456020A2A054376E2F5DCADC80ECA45 ();
+// 0x0000003D System.Void HookMover::FixedUpdate()
+extern void HookMover_FixedUpdate_mB0BA587A235F5C4A1CCB0EEE3934E076C8DA3DC4 ();
+// 0x0000003E System.Void HookMover::Update()
+extern void HookMover_Update_mE17194FB3F7EE86E637A072F498B368951DAA100 ();
+// 0x0000003F System.Void HookMover::Move()
+extern void HookMover_Move_m43D948CA33B1195A0EEC30FFFA334A486FEA8C8F ();
+// 0x00000040 System.Void HookMover::StartFishing()
+extern void HookMover_StartFishing_m1B8A3D612FFA628CB5516ADEA94B3082C7B05CE3 ();
+// 0x00000041 System.Void HookMover::EndFishing()
+extern void HookMover_EndFishing_m99C7423682F082B22037AE2D1B7D4FA1669AFFAE ();
+// 0x00000042 System.Void HookMover::ChangeFishingValues(System.Boolean)
+extern void HookMover_ChangeFishingValues_mC8FFE2E4FB73A6876106D51C53AEDACC6DE32741 ();
+// 0x00000043 System.Void HookMover::MousePositionFollow()
+extern void HookMover_MousePositionFollow_m082992761AC49089023931ADE8D5FFA8C46D0641 ();
+// 0x00000044 System.Void HookMover::ReloadRod()
+extern void HookMover_ReloadRod_m270B91E9CEB7739F645BA97F823AA9549EF1BE1C ();
+// 0x00000045 System.Void HookMover::SetTarget(System.Single)
+extern void HookMover_SetTarget_mF25A4584BA737CCE51FA6E56BF3C6D9AE22F8477 ();
+// 0x00000046 System.Void HookMover::EndCachingFishes()
+extern void HookMover_EndCachingFishes_m76129A8CE22AE292C1A1485F043D750D9F633E5B ();
+// 0x00000047 System.Void HookMover::Accelerate()
+extern void HookMover_Accelerate_mAEDE444626D3EF9E02F1372DDBE457B8CE705C07 ();
+// 0x00000048 System.Void HookMover::ResetSpeed()
+extern void HookMover_ResetSpeed_mD3675C6C3C02F63DC0757CDE99A102E0A49926AE ();
+// 0x00000049 System.Void HookMover::.ctor()
+extern void HookMover__ctor_m253AD83C26BBA8BE05CA7BCDA68C6A182FE0704F ();
+// 0x0000004A System.Void HookView::Start()
+extern void HookView_Start_m93B80768C148BD051CC2D2C724B814DE7BCC6610 ();
+// 0x0000004B System.Void HookView::OnEnable()
+extern void HookView_OnEnable_mB6463CD571427A47187BF086DD04C3BC5BB25237 ();
+// 0x0000004C System.Void HookView::OnDisable()
+extern void HookView_OnDisable_m7607816DAF0F348CACA36A7AC8BA413C1098326C ();
+// 0x0000004D System.Void HookView::TryToLockHook()
+extern void HookView_TryToLockHook_m821BB6488C60A67D6F522933F806116BDF229DF2 ();
+// 0x0000004E System.Void HookView::Render(Hook)
+extern void HookView_Render_mAE80026D813504DDCCD98B8CF3C8E5574273A0CA ();
+// 0x0000004F System.Void HookView::OnBuyButton()
+extern void HookView_OnBuyButton_mBFC4F2459D2189641760201C938FA2F1EFB9978D ();
+// 0x00000050 System.Void HookView::OnBuyForWatchButtonClick()
+extern void HookView_OnBuyForWatchButtonClick_mA4A67FF1AAEBEA28227FFAD499D4508D54D0F34F ();
+// 0x00000051 System.Void HookView::.ctor()
+extern void HookView__ctor_m48410AFD65A4BE0895BFC341EDA64B7CECD77B32 ();
+// 0x00000052 System.Void InitilizeAds::Start()
+extern void InitilizeAds_Start_mE743E3DD20ED2C733889D4C5ACFEF5F05ECAD9D7 ();
+// 0x00000053 System.Void InitilizeAds::ShowInterstitialAd()
+extern void InitilizeAds_ShowInterstitialAd_m27345F10C99603F9CEFFDAED7722EC188C81045D ();
+// 0x00000054 System.Void InitilizeAds::.ctor()
+extern void InitilizeAds__ctor_m87A5431C760FD2F72F7D417AD9FC893F220C25A8 ();
+// 0x00000055 System.Void Menu::OpenPanel(UnityEngine.GameObject)
+extern void Menu_OpenPanel_m7CF52ACA0A3589AA1B7389B1146B4F568183BB0E ();
+// 0x00000056 System.Void Menu::ClosePanel(UnityEngine.GameObject)
+extern void Menu_ClosePanel_m90642DB79BB94CA1ED39810B1DF9ADDAB05297C6 ();
+// 0x00000057 System.Void Menu::.ctor()
+extern void Menu__ctor_mD372D109F6554E1F9A25291964C852C9F6BFC463 ();
+// 0x00000058 System.Void ObjectPool::Initialize(UnityEngine.GameObject)
+extern void ObjectPool_Initialize_m44D648B1EC29A1D50099545F1E44692C5548E48E ();
+// 0x00000059 System.Boolean ObjectPool::TryGetObject(UnityEngine.GameObject&)
+extern void ObjectPool_TryGetObject_m88A89B1149285726DC78C786E12E3DF80C1B8023 ();
+// 0x0000005A System.Void ObjectPool::.ctor()
+extern void ObjectPool__ctor_mA16DCE8D7CC82487D312645167C3135A60831351 ();
+// 0x0000005B System.Int32 Player::get_Money()
+extern void Player_get_Money_mFBE3D73EE3DE2BBDBA89E3A0B434D8DCD718837E ();
+// 0x0000005C System.Void Player::add_OnMoneyChanged(UnityEngine.Events.UnityAction`1<System.Int32>)
+extern void Player_add_OnMoneyChanged_m4E43185007015E816123BB143D0421994B38928B ();
+// 0x0000005D System.Void Player::remove_OnMoneyChanged(UnityEngine.Events.UnityAction`1<System.Int32>)
+extern void Player_remove_OnMoneyChanged_mD48BDAE1B6C0B5766ACFA6F63DD830B8F7783187 ();
+// 0x0000005E System.Void Player::Start()
+extern void Player_Start_mE9ACCAA7FEBF4020693FFB73C0839CF3AAD0B0C4 ();
+// 0x0000005F System.Void Player::SellFish(Fish)
+extern void Player_SellFish_m26923F290869FAE26F04C54CB637B03F128C8EA5 ();
+// 0x00000060 System.Void Player::ChangeMoneyDisplay(System.Boolean)
+extern void Player_ChangeMoneyDisplay_m21473995DA6926EE08E682FB24DC71730DCE285A ();
+// 0x00000061 System.Void Player::BuyHook(Hook,System.Boolean)
+extern void Player_BuyHook_m73CFDDF764E450F2C3D78019D916FABFA875FE57 ();
+// 0x00000062 System.Boolean Player::TryBuyLenght(System.Int32)
+extern void Player_TryBuyLenght_m446762D92AB1D6C8306D7A62ADD6C72FE3E6B8B9 ();
+// 0x00000063 System.Boolean Player::TryBuyCapacity(System.Int32)
+extern void Player_TryBuyCapacity_m7416AA6A147C58D91E9B42E4865A35FE8FFCBD1F ();
+// 0x00000064 System.Void Player::SetText()
+extern void Player_SetText_m5EAB34C73E9439EFE5001A61657C4A94D7C561F0 ();
+// 0x00000065 System.Void Player::SaveMoney()
+extern void Player_SaveMoney_m2FDE83988A8AA9FFCEEA417CB124D93A808CCEDB ();
+// 0x00000066 System.Boolean Player::TrySpendMoney(System.Int32)
+extern void Player_TrySpendMoney_m62908C2B25130BCCE1EDCD7ADA5D9D47D358DC15 ();
+// 0x00000067 System.Void Player::.ctor()
+extern void Player__ctor_m8F4AB650C5E2DE406B3C65EA8F662013458D85E2 ();
+// 0x00000068 System.Void PoolActivator::Start()
+extern void PoolActivator_Start_m3DFDAD1BC42287BEE5EA05DAC15C173483036F7B ();
+// 0x00000069 System.Void PoolActivator::OnTriggerEnter2D(UnityEngine.Collider2D)
+extern void PoolActivator_OnTriggerEnter2D_m1BCC0D8E4075695F2BF75AB3D0BCAF9CAF99C725 ();
+// 0x0000006A System.Void PoolActivator::.ctor()
+extern void PoolActivator__ctor_m56207E045623D02B5826D5DF0A061B4126687C26 ();
+// 0x0000006B System.Void PoolSpawner::Awake()
+extern void PoolSpawner_Awake_mB2130CCB137AA8E78B7B5AE05F1C4D6F84434004 ();
+// 0x0000006C System.Void PoolSpawner::.ctor()
+extern void PoolSpawner__ctor_mBB5C91C1F6AC542BF9E289A8E7CFF9FB2E0B556C ();
+// 0x0000006D Player Rod::get_Player()
+extern void Rod_get_Player_m5DE78B7E12FDDD5CF5BA8656F7FB58E3B8CC178B ();
+// 0x0000006E System.Boolean Rod::get_IsShooting()
+extern void Rod_get_IsShooting_mA34E5670AF7CF2ECB58F3D97C834B7130046566F ();
+// 0x0000006F Hook Rod::get_CurrentHook()
+extern void Rod_get_CurrentHook_m8B9D9E90D00D6F00A672F7C2D4B84B4776FBC362 ();
+// 0x00000070 System.Void Rod::Awake()
+extern void Rod_Awake_mC75A8E70C871ACA9E4CACA085DA4A9F1E32388C5 ();
+// 0x00000071 System.Void Rod::OnEnable()
+extern void Rod_OnEnable_mD86A2836F15CFA91F75F94027E0AF19FDFAC70FC ();
+// 0x00000072 System.Void Rod::Start()
+extern void Rod_Start_m56D2BFCB912556B11231D0E40C4E4503EADA8616 ();
+// 0x00000073 System.Void Rod::Update()
+extern void Rod_Update_m093011F9B821B2AE1DF32A0B21345FDA21CE6847 ();
+// 0x00000074 System.Void Rod::LoadBuyedHooks()
+extern void Rod_LoadBuyedHooks_m92C1C3BD5A90F700C411C2BFE08D9912342AEAA9 ();
+// 0x00000075 System.Void Rod::LaunchHook(Hook)
+extern void Rod_LaunchHook_m86DD31F69974D6F84FBF4AAA7DBFD3327704D12F ();
+// 0x00000076 System.Void Rod::SetActiveeHook()
+extern void Rod_SetActiveeHook_m225608143462F6E2836B4F85B3670FBFC7F7BFDE ();
+// 0x00000077 System.Void Rod::Reload()
+extern void Rod_Reload_m091E63B90D6789D0B4772C4041C796EEF447C42F ();
+// 0x00000078 System.Void Rod::SetHook()
+extern void Rod_SetHook_m4CAB5DF97DE78F5C0D04CAA139BA7C738CDA8610 ();
+// 0x00000079 System.Void Rod::ResetButtons(System.Boolean)
+extern void Rod_ResetButtons_mF4D5902FC7BF586504A116691049DD70B23BEC1F ();
+// 0x0000007A System.Boolean Rod::IncreaseDeepLenght(System.Int32)
+extern void Rod_IncreaseDeepLenght_mB6E8C5574AAF7B251CD72DCFFE89E1B794E77A73 ();
+// 0x0000007B System.Boolean Rod::EnlargeCapacity(System.Int32)
+extern void Rod_EnlargeCapacity_m4E2068110650CC13D09B78C9FD195F55DEF74223 ();
+// 0x0000007C System.Void Rod::.ctor()
+extern void Rod__ctor_mF8E70D4E8658D03B10A65037EC32A4F64A2F00C4 ();
+// 0x0000007D System.Void Spawner::Start()
+extern void Spawner_Start_mEA70C3EA61603E141DD386EC98864D2A80917900 ();
+// 0x0000007E System.Void Spawner::SetFish(UnityEngine.GameObject,UnityEngine.Vector2)
+extern void Spawner_SetFish_mF83F292F5B764FB528E7E6D914A8BEF59CC5574D ();
+// 0x0000007F System.Void Spawner::GetSpawnPoints()
+extern void Spawner_GetSpawnPoints_mEB4D4D542598EEFD515679BFCC6BEAAF83C1B1A3 ();
+// 0x00000080 System.Void Spawner::TryActivateFishes()
+extern void Spawner_TryActivateFishes_mD04F941CC13CEBA68614765B0E8C48187EF8D3B0 ();
+// 0x00000081 System.Void Spawner::SetPrefabs(System.Collections.Generic.List`1<UnityEngine.GameObject>)
+extern void Spawner_SetPrefabs_mE3E08760A9340CCF0C34B3EB7748F30B880180EB ();
+// 0x00000082 System.Void Spawner::.ctor()
+extern void Spawner__ctor_mA37BC0F6624E147B76FC192F6E53162998BCA0A5 ();
+// 0x00000083 System.Void CollectText::SetText(System.Int32)
+extern void CollectText_SetText_mBD2A445615C45243DCDD599AEC78B16279FC19E9 ();
+// 0x00000084 System.Void CollectText::.ctor()
+extern void CollectText__ctor_m1D98CE5549E380B613139ADDEA63B2695C76F782 ();
+// 0x00000085 System.Void FishCountDisplay::OnCountChanged(System.Int32,System.Int32)
+extern void FishCountDisplay_OnCountChanged_m5E8E62C05A5D0E1BC3E2559478460EB0F9129B1E ();
+// 0x00000086 System.Void FishCountDisplay::SetBag(Bag)
+extern void FishCountDisplay_SetBag_m2D53EC39A9238D427DBA6AC72521824485D2F0AA ();
+// 0x00000087 System.Void FishCountDisplay::ResetBag(Bag)
+extern void FishCountDisplay_ResetBag_m431DCAD2AA8D4B3861F582C30111BB870D6AF48F ();
+// 0x00000088 System.Void FishCountDisplay::.ctor()
+extern void FishCountDisplay__ctor_m7EBC6D07A18B1DC86C9358E1D1BCDC931FCA87CE ();
+// 0x00000089 System.Void GameController::Start()
+extern void GameController_Start_m229BE9A914ADF299ACFF1EFD5F15F27FF146D3C0 ();
+// 0x0000008A System.Void GameController::OnChangeHookButtonClick()
+extern void GameController_OnChangeHookButtonClick_m638FE08A8C49C34E1D62753F197DE3F53881B721 ();
+// 0x0000008B System.Void GameController::OnCollectButtonClick(System.Boolean)
+extern void GameController_OnCollectButtonClick_mBF7C6D802085D89020718658755491581445AEFC ();
+// 0x0000008C System.Collections.IEnumerator GameController::WaitForClosePanel()
+extern void GameController_WaitForClosePanel_mDDDA9AF3CB407BC3BBDAEBA7FE955DB9A2D1C94E ();
+// 0x0000008D System.Void GameController::ResetGame()
+extern void GameController_ResetGame_mEF25CCAA937DBCDEF25CE02BA08AA7ADA5E47C11 ();
+// 0x0000008E System.Void GameController::.ctor()
+extern void GameController__ctor_m839A9CFB9635B009C1DA139BEAD0E38467E57464 ();
+// 0x0000008F System.Void MoneyDisplay::OnEnable()
+extern void MoneyDisplay_OnEnable_m6264AAB36281943E296AEF5463C95CED527B39F3 ();
+// 0x00000090 System.Void MoneyDisplay::OnDisable()
+extern void MoneyDisplay_OnDisable_m5122554F919F3D66236A38BE9BDDDE1C102B3F5A ();
+// 0x00000091 System.Void MoneyDisplay::OnMoneyChanged(System.Int32)
+extern void MoneyDisplay_OnMoneyChanged_m17605384324D4BD625E18444A2CD48AA05019949 ();
+// 0x00000092 System.Void MoneyDisplay::.ctor()
+extern void MoneyDisplay__ctor_m5238B6144AF594C2A80BB6B5BCF1B4DBA11EF12F ();
+// 0x00000093 System.Void Shop::Start()
+extern void Shop_Start_m624525FAE8163E81E7A1C3FE4230165F49CED736 ();
+// 0x00000094 System.Void Shop::AddHook(Hook)
+extern void Shop_AddHook_mEE503285EEAA02202F8A5A324357B099A639C030 ();
+// 0x00000095 System.Void Shop::OnSellButtonClick(Hook,HookView,System.Boolean)
+extern void Shop_OnSellButtonClick_mA45B594D1850AA90173EAA5C5E09F27645257950 ();
+// 0x00000096 System.Void Shop::TryToSellHook(Hook,HookView,System.Boolean)
+extern void Shop_TryToSellHook_mCA8DABF4DCF6322E7A230100E90CB2340F4B0D5A ();
+// 0x00000097 System.Void Shop::BuyHook(Hook,HookView,System.Boolean)
+extern void Shop_BuyHook_m47E64341BBC99F84B37CB21F35352DAA0E7B6485 ();
+// 0x00000098 System.Void Shop::.ctor()
+extern void Shop__ctor_mE91032C14DE263A2419B0B6B8BDE9245845118A0 ();
+// 0x00000099 System.Void UpdateButtonParametrs::Start()
+extern void UpdateButtonParametrs_Start_m1AF36194FE1CCA31CD317D7CCDE1683A7D4B4951 ();
+// 0x0000009A System.Void UpdateButtonParametrs::OnIncreaceCapacityButtonClick()
+extern void UpdateButtonParametrs_OnIncreaceCapacityButtonClick_m59E9BFC16EC16A26ED90672CCDE1355EA8702405 ();
+// 0x0000009B System.Void UpdateButtonParametrs::OnEnlargeLenghtButtonClick()
+extern void UpdateButtonParametrs_OnEnlargeLenghtButtonClick_mA5DC5CEE975AD4E8922FDA63988A6E52243EEB72 ();
+// 0x0000009C System.Void UpdateButtonParametrs::UpdatePrice()
+extern void UpdateButtonParametrs_UpdatePrice_m98304B6A2E05CEB303BFD30A918A61B9D28D3270 ();
+// 0x0000009D System.Void UpdateButtonParametrs::.ctor()
+extern void UpdateButtonParametrs__ctor_mDD1CD39876422E10ED770384D05E48925D4B1AA9 ();
+// 0x0000009E System.Void ObjectPool_<>c::.cctor()
+extern void U3CU3Ec__cctor_m719D7CF24324A1E3E73C8DC8E5714F6313879D42 ();
+// 0x0000009F System.Void ObjectPool_<>c::.ctor()
+extern void U3CU3Ec__ctor_m3068D569668552362F00E3C1977C69E54F21DC76 ();
+// 0x000000A0 System.Boolean ObjectPool_<>c::<TryGetObject>b__4_0(UnityEngine.GameObject)
+extern void U3CU3Ec_U3CTryGetObjectU3Eb__4_0_m39CE76BB1461DA1003653137BB2F394B446DEE63 ();
+// 0x000000A1 System.Void Rod_<>c::.cctor()
+extern void U3CU3Ec__cctor_m8F27C8DBE7A7311392D47ED77EF709119690340D ();
+// 0x000000A2 System.Void Rod_<>c::.ctor()
+extern void U3CU3Ec__ctor_mE55E818106437B30EAD4022F690266876CBAE6C7 ();
+// 0x000000A3 System.Boolean Rod_<>c::<SetHook>b__24_0(Hook)
+extern void U3CU3Ec_U3CSetHookU3Eb__24_0_m49947525F3EF42DD26747AB10A5ADA3AFA337E48 ();
+// 0x000000A4 System.Void GameController_<WaitForClosePanel>d__5::.ctor(System.Int32)
+extern void U3CWaitForClosePanelU3Ed__5__ctor_m452301601E798E03D184BA2645929C52F220B391 ();
+// 0x000000A5 System.Void GameController_<WaitForClosePanel>d__5::System.IDisposable.Dispose()
+extern void U3CWaitForClosePanelU3Ed__5_System_IDisposable_Dispose_mF4B1834A5C9494F4431BF6EC507CD90C9D49042A ();
+// 0x000000A6 System.Boolean GameController_<WaitForClosePanel>d__5::MoveNext()
+extern void U3CWaitForClosePanelU3Ed__5_MoveNext_mB958FDF9B79BDB1B2849870F8DFFA536ED88EECF ();
+// 0x000000A7 System.Object GameController_<WaitForClosePanel>d__5::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CWaitForClosePanelU3Ed__5_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC89E386D17214D23A7B2F287EAE703936A88C68F ();
+// 0x000000A8 System.Void GameController_<WaitForClosePanel>d__5::System.Collections.IEnumerator.Reset()
+extern void U3CWaitForClosePanelU3Ed__5_System_Collections_IEnumerator_Reset_mA808E9572D42A09D02406226730C2C648BB382A5 ();
+// 0x000000A9 System.Object GameController_<WaitForClosePanel>d__5::System.Collections.IEnumerator.get_Current()
+extern void U3CWaitForClosePanelU3Ed__5_System_Collections_IEnumerator_get_Current_mD23BB18BD1B4DD331DC26EF10E4912D01BE1BE10 ();
+static Il2CppMethodPointer s_methodPointers[169] = 
+{
+	CameraMover_Start_m26184D345ECDD5759D0930743AED2847EEA28147,
+	CameraMover_FixedUpdate_mDE047F791E3BCB6B86745F817287839787916ED2,
+	CameraMover_Update_m1319670F431E86D6E7B40E5D5A7AE8CEF70CF695,
+	CameraMover_SetCurrentHook_m70C10A2C4947D443692CB7019453AB91A6979CEB,
+	CameraMover_AddPool_m3CA61A472B04A09FA365B5A6EE8C79A9C3B93DE9,
+	CameraMover_CheckFishPosition_m68130F59110245DB754163208B3FB6328986C318,
+	CameraMover__ctor_m49C866C78A9069E7A837D5CC54389B5A5E023385,
+	ColorChangePoint_get_Color_m31676B8513F26845D132E2E46742632FC816C38B,
+	ColorChangePoint__ctor_m5A7AA60169BC470DE97AA616DF8725E580A097AA,
+	ColorChanger_Start_mE52BCF87BF7B6F66F34F00745BD3645C3ECF4034,
+	ColorChanger_Update_m40FB069A36003D054ABDE347F138261680931FEA,
+	ColorChanger_ChangeBackgroundColor_m8D706A2B4169DFA984151456955E188C7B76A7AE,
+	ColorChanger_SetTargetColor_m00AC83C61B9E0BEA6EEB16798402150CD1CCFF6B,
+	ColorChanger__ctor_mE7BDE2F5AB9D2124FACA897BDB58F5A75D7E8ED8,
+	Fish_get_Reward_m1F7023DBDB2BF1D894564320C265A1550A495724,
+	Fish_Start_m5CFF30F848FEB960857AE41FB2B1F88DF199C692,
+	Fish_SellFish_m2171C078DC286E3A8ED9F71BEB7495452A4D9D65,
+	Fish__ctor_m046CC304063AA00E1DF395DDA23B36F7B6D1152A,
+	FishMover_OnEnable_mA6B80D4D44659D14C74DA140B956F0D9CD850E43,
+	FishMover_Awake_m16E259AFB93605386798CA498304CE000441F655,
+	FishMover_Update_m1425FCCAB9F0BC62000AF113B171E05B970AAA68,
+	FishMover_SetStartSettings_mAE4C1284A7C15ADC6D5157973B18D9B458FA70FB,
+	FishMover_Move_m9CE7E76CBA3187706C535DD7C62B0ABC6FC57382,
+	FishMover_CheckXPosition_m282629BEB9C05C5839CE7919C08B8B4375268910,
+	FishMover_ChangeDirection_mB31D1B79564A61B7505B62BA8CA58C8485BA4C48,
+	FishMover_Spin_m4ED40C025645B581AEEE3EC1ECD06510D7C2466B,
+	FishMover_Hooked_mA57DC524EE05CE556584E33BC0AE7A12DB156440,
+	FishMover__ctor_mCF65BF653099C5C266273561F35D81AADB8C25F1,
+	Bag_Start_m371E643A725B7E9F8F7B54DFF6E46790D560790F,
+	Bag_OnEnable_m4C4398CCB6BEFBC9C0645CC783EF8E7DAE6B4011,
+	Bag_OnDisable_m6C7ED2FD683E495200BAFA66E1FBC808E1DAAD62,
+	Bag_UpdateFishesBag_mB1BA4AAB174BB8554DB8C926908CCE4408FD7AF4,
+	Bag_TryToAddFish_mF7CC8A2516120E1FDBEEC29DDF898573F37BADA2,
+	Bag_TryToSellFishes_m21AC6DF1500B8C03044BA69EB3C26FE3AC498CE6,
+	Bag__ctor_m5A0F5D2CAF63BB9E56ABA3C2FF7AFF863351A86D,
+	FishesCollector_Start_mF4D94166DCFA42C742EC147B7A38020B1E79C646,
+	FishesCollector_ChangeIsFishing_m6BFCF4D4AEBDB95038021877C3EBCFCAEE5C5A45,
+	FishesCollector_OnTriggerEnter2D_m505D8C3332C33D7743C82E09DC243BE9A92BCB2B,
+	FishesCollector__ctor_m5411943873548708A081199EA59C16F71DB24188,
+	Hook_get_Number_m4AFBD3D3EB6A18E2AF31BC3F8EE5C86CF9C77382,
+	Hook_get_Player_m01B58B87165EAB0BBAEC93FF5BD3AA4E7ABACBD6,
+	Hook_get_Name_mB6C12A1405E2A6CA253FC63E4CB7CCA9A28C368D,
+	Hook_get_Price_m73490B615B72B7E345371C521A20FE4B600817FA,
+	Hook_get_IsBuyed_mA98C9F19CE48A8EA5A49F248BB0DC8696D0977D5,
+	Hook_get_Icon_mBA772E059711643E54024CC8730B2507B5BE879D,
+	Hook_add_OnCloseCollectPanel_m1F14F5C0AC9A06545596D0FE04EE88FE11A849C6,
+	Hook_remove_OnCloseCollectPanel_mD043F6D8FE7FDDBE30A077D97F2A31919BE4619F,
+	Hook_OnEnable_m9598D25DDFFA64ACACAA73F9BA6B9F5C66D6075F,
+	Hook_OnDisable_m5C33D19E674AD57048D486AF6C1A4C639382785E,
+	Hook_UnlockHook_mE04D26A654EC1176163A1DE55CCC6FB75B3CF8B8,
+	Hook_TryToSellFishes_m00A68C072AC6807C19F2001F49D8D04309CB4B3A,
+	Hook_CloseCollectPanel_m2470E388652AB5FA3AEC2E675C9A5FB20D6B916B,
+	Hook_UpdateFishesBag_mF5C7161355C91F298C5ABCAB2B527EABED59E7FC,
+	Hook_CheckBuyedHooks_m4A3F47DBC81D7CE5C929108D1E654FB7B5E7D063,
+	Hook__ctor_m207B21B789CA74544A035831C115232CF7052E53,
+	HookColorChanger_Start_mA591353FE08E0CA908D86F51A07FFA36EB215782,
+	HookColorChanger_OnTriggerEnter2D_m5F427502A592B461C4A3A972289F03B7C95B5DF6,
+	HookColorChanger__ctor_mCD018205478689454D571941530EEB367E7C0BC3,
+	HookMover_Awake_mE604C473302D8853CBDC4B99C6FFE6FC39D9424A,
+	HookMover_OnEnable_m5474725BE456020A2A054376E2F5DCADC80ECA45,
+	HookMover_FixedUpdate_mB0BA587A235F5C4A1CCB0EEE3934E076C8DA3DC4,
+	HookMover_Update_mE17194FB3F7EE86E637A072F498B368951DAA100,
+	HookMover_Move_m43D948CA33B1195A0EEC30FFFA334A486FEA8C8F,
+	HookMover_StartFishing_m1B8A3D612FFA628CB5516ADEA94B3082C7B05CE3,
+	HookMover_EndFishing_m99C7423682F082B22037AE2D1B7D4FA1669AFFAE,
+	HookMover_ChangeFishingValues_mC8FFE2E4FB73A6876106D51C53AEDACC6DE32741,
+	HookMover_MousePositionFollow_m082992761AC49089023931ADE8D5FFA8C46D0641,
+	HookMover_ReloadRod_m270B91E9CEB7739F645BA97F823AA9549EF1BE1C,
+	HookMover_SetTarget_mF25A4584BA737CCE51FA6E56BF3C6D9AE22F8477,
+	HookMover_EndCachingFishes_m76129A8CE22AE292C1A1485F043D750D9F633E5B,
+	HookMover_Accelerate_mAEDE444626D3EF9E02F1372DDBE457B8CE705C07,
+	HookMover_ResetSpeed_mD3675C6C3C02F63DC0757CDE99A102E0A49926AE,
+	HookMover__ctor_m253AD83C26BBA8BE05CA7BCDA68C6A182FE0704F,
+	HookView_Start_m93B80768C148BD051CC2D2C724B814DE7BCC6610,
+	HookView_OnEnable_mB6463CD571427A47187BF086DD04C3BC5BB25237,
+	HookView_OnDisable_m7607816DAF0F348CACA36A7AC8BA413C1098326C,
+	HookView_TryToLockHook_m821BB6488C60A67D6F522933F806116BDF229DF2,
+	HookView_Render_mAE80026D813504DDCCD98B8CF3C8E5574273A0CA,
+	HookView_OnBuyButton_mBFC4F2459D2189641760201C938FA2F1EFB9978D,
+	HookView_OnBuyForWatchButtonClick_mA4A67FF1AAEBEA28227FFAD499D4508D54D0F34F,
+	HookView__ctor_m48410AFD65A4BE0895BFC341EDA64B7CECD77B32,
+	InitilizeAds_Start_mE743E3DD20ED2C733889D4C5ACFEF5F05ECAD9D7,
+	InitilizeAds_ShowInterstitialAd_m27345F10C99603F9CEFFDAED7722EC188C81045D,
+	InitilizeAds__ctor_m87A5431C760FD2F72F7D417AD9FC893F220C25A8,
+	Menu_OpenPanel_m7CF52ACA0A3589AA1B7389B1146B4F568183BB0E,
+	Menu_ClosePanel_m90642DB79BB94CA1ED39810B1DF9ADDAB05297C6,
+	Menu__ctor_mD372D109F6554E1F9A25291964C852C9F6BFC463,
+	ObjectPool_Initialize_m44D648B1EC29A1D50099545F1E44692C5548E48E,
+	ObjectPool_TryGetObject_m88A89B1149285726DC78C786E12E3DF80C1B8023,
+	ObjectPool__ctor_mA16DCE8D7CC82487D312645167C3135A60831351,
+	Player_get_Money_mFBE3D73EE3DE2BBDBA89E3A0B434D8DCD718837E,
+	Player_add_OnMoneyChanged_m4E43185007015E816123BB143D0421994B38928B,
+	Player_remove_OnMoneyChanged_mD48BDAE1B6C0B5766ACFA6F63DD830B8F7783187,
+	Player_Start_mE9ACCAA7FEBF4020693FFB73C0839CF3AAD0B0C4,
+	Player_SellFish_m26923F290869FAE26F04C54CB637B03F128C8EA5,
+	Player_ChangeMoneyDisplay_m21473995DA6926EE08E682FB24DC71730DCE285A,
+	Player_BuyHook_m73CFDDF764E450F2C3D78019D916FABFA875FE57,
+	Player_TryBuyLenght_m446762D92AB1D6C8306D7A62ADD6C72FE3E6B8B9,
+	Player_TryBuyCapacity_m7416AA6A147C58D91E9B42E4865A35FE8FFCBD1F,
+	Player_SetText_m5EAB34C73E9439EFE5001A61657C4A94D7C561F0,
+	Player_SaveMoney_m2FDE83988A8AA9FFCEEA417CB124D93A808CCEDB,
+	Player_TrySpendMoney_m62908C2B25130BCCE1EDCD7ADA5D9D47D358DC15,
+	Player__ctor_m8F4AB650C5E2DE406B3C65EA8F662013458D85E2,
+	PoolActivator_Start_m3DFDAD1BC42287BEE5EA05DAC15C173483036F7B,
+	PoolActivator_OnTriggerEnter2D_m1BCC0D8E4075695F2BF75AB3D0BCAF9CAF99C725,
+	PoolActivator__ctor_m56207E045623D02B5826D5DF0A061B4126687C26,
+	PoolSpawner_Awake_mB2130CCB137AA8E78B7B5AE05F1C4D6F84434004,
+	PoolSpawner__ctor_mBB5C91C1F6AC542BF9E289A8E7CFF9FB2E0B556C,
+	Rod_get_Player_m5DE78B7E12FDDD5CF5BA8656F7FB58E3B8CC178B,
+	Rod_get_IsShooting_mA34E5670AF7CF2ECB58F3D97C834B7130046566F,
+	Rod_get_CurrentHook_m8B9D9E90D00D6F00A672F7C2D4B84B4776FBC362,
+	Rod_Awake_mC75A8E70C871ACA9E4CACA085DA4A9F1E32388C5,
+	Rod_OnEnable_mD86A2836F15CFA91F75F94027E0AF19FDFAC70FC,
+	Rod_Start_m56D2BFCB912556B11231D0E40C4E4503EADA8616,
+	Rod_Update_m093011F9B821B2AE1DF32A0B21345FDA21CE6847,
+	Rod_LoadBuyedHooks_m92C1C3BD5A90F700C411C2BFE08D9912342AEAA9,
+	Rod_LaunchHook_m86DD31F69974D6F84FBF4AAA7DBFD3327704D12F,
+	Rod_SetActiveeHook_m225608143462F6E2836B4F85B3670FBFC7F7BFDE,
+	Rod_Reload_m091E63B90D6789D0B4772C4041C796EEF447C42F,
+	Rod_SetHook_m4CAB5DF97DE78F5C0D04CAA139BA7C738CDA8610,
+	Rod_ResetButtons_mF4D5902FC7BF586504A116691049DD70B23BEC1F,
+	Rod_IncreaseDeepLenght_mB6E8C5574AAF7B251CD72DCFFE89E1B794E77A73,
+	Rod_EnlargeCapacity_m4E2068110650CC13D09B78C9FD195F55DEF74223,
+	Rod__ctor_mF8E70D4E8658D03B10A65037EC32A4F64A2F00C4,
+	Spawner_Start_mEA70C3EA61603E141DD386EC98864D2A80917900,
+	Spawner_SetFish_mF83F292F5B764FB528E7E6D914A8BEF59CC5574D,
+	Spawner_GetSpawnPoints_mEB4D4D542598EEFD515679BFCC6BEAAF83C1B1A3,
+	Spawner_TryActivateFishes_mD04F941CC13CEBA68614765B0E8C48187EF8D3B0,
+	Spawner_SetPrefabs_mE3E08760A9340CCF0C34B3EB7748F30B880180EB,
+	Spawner__ctor_mA37BC0F6624E147B76FC192F6E53162998BCA0A5,
+	CollectText_SetText_mBD2A445615C45243DCDD599AEC78B16279FC19E9,
+	CollectText__ctor_m1D98CE5549E380B613139ADDEA63B2695C76F782,
+	FishCountDisplay_OnCountChanged_m5E8E62C05A5D0E1BC3E2559478460EB0F9129B1E,
+	FishCountDisplay_SetBag_m2D53EC39A9238D427DBA6AC72521824485D2F0AA,
+	FishCountDisplay_ResetBag_m431DCAD2AA8D4B3861F582C30111BB870D6AF48F,
+	FishCountDisplay__ctor_m7EBC6D07A18B1DC86C9358E1D1BCDC931FCA87CE,
+	GameController_Start_m229BE9A914ADF299ACFF1EFD5F15F27FF146D3C0,
+	GameController_OnChangeHookButtonClick_m638FE08A8C49C34E1D62753F197DE3F53881B721,
+	GameController_OnCollectButtonClick_mBF7C6D802085D89020718658755491581445AEFC,
+	GameController_WaitForClosePanel_mDDDA9AF3CB407BC3BBDAEBA7FE955DB9A2D1C94E,
+	GameController_ResetGame_mEF25CCAA937DBCDEF25CE02BA08AA7ADA5E47C11,
+	GameController__ctor_m839A9CFB9635B009C1DA139BEAD0E38467E57464,
+	MoneyDisplay_OnEnable_m6264AAB36281943E296AEF5463C95CED527B39F3,
+	MoneyDisplay_OnDisable_m5122554F919F3D66236A38BE9BDDDE1C102B3F5A,
+	MoneyDisplay_OnMoneyChanged_m17605384324D4BD625E18444A2CD48AA05019949,
+	MoneyDisplay__ctor_m5238B6144AF594C2A80BB6B5BCF1B4DBA11EF12F,
+	Shop_Start_m624525FAE8163E81E7A1C3FE4230165F49CED736,
+	Shop_AddHook_mEE503285EEAA02202F8A5A324357B099A639C030,
+	Shop_OnSellButtonClick_mA45B594D1850AA90173EAA5C5E09F27645257950,
+	Shop_TryToSellHook_mCA8DABF4DCF6322E7A230100E90CB2340F4B0D5A,
+	Shop_BuyHook_m47E64341BBC99F84B37CB21F35352DAA0E7B6485,
+	Shop__ctor_mE91032C14DE263A2419B0B6B8BDE9245845118A0,
+	UpdateButtonParametrs_Start_m1AF36194FE1CCA31CD317D7CCDE1683A7D4B4951,
+	UpdateButtonParametrs_OnIncreaceCapacityButtonClick_m59E9BFC16EC16A26ED90672CCDE1355EA8702405,
+	UpdateButtonParametrs_OnEnlargeLenghtButtonClick_mA5DC5CEE975AD4E8922FDA63988A6E52243EEB72,
+	UpdateButtonParametrs_UpdatePrice_m98304B6A2E05CEB303BFD30A918A61B9D28D3270,
+	UpdateButtonParametrs__ctor_mDD1CD39876422E10ED770384D05E48925D4B1AA9,
+	U3CU3Ec__cctor_m719D7CF24324A1E3E73C8DC8E5714F6313879D42,
+	U3CU3Ec__ctor_m3068D569668552362F00E3C1977C69E54F21DC76,
+	U3CU3Ec_U3CTryGetObjectU3Eb__4_0_m39CE76BB1461DA1003653137BB2F394B446DEE63,
+	U3CU3Ec__cctor_m8F27C8DBE7A7311392D47ED77EF709119690340D,
+	U3CU3Ec__ctor_mE55E818106437B30EAD4022F690266876CBAE6C7,
+	U3CU3Ec_U3CSetHookU3Eb__24_0_m49947525F3EF42DD26747AB10A5ADA3AFA337E48,
+	U3CWaitForClosePanelU3Ed__5__ctor_m452301601E798E03D184BA2645929C52F220B391,
+	U3CWaitForClosePanelU3Ed__5_System_IDisposable_Dispose_mF4B1834A5C9494F4431BF6EC507CD90C9D49042A,
+	U3CWaitForClosePanelU3Ed__5_MoveNext_mB958FDF9B79BDB1B2849870F8DFFA536ED88EECF,
+	U3CWaitForClosePanelU3Ed__5_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC89E386D17214D23A7B2F287EAE703936A88C68F,
+	U3CWaitForClosePanelU3Ed__5_System_Collections_IEnumerator_Reset_mA808E9572D42A09D02406226730C2C648BB382A5,
+	U3CWaitForClosePanelU3Ed__5_System_Collections_IEnumerator_get_Current_mD23BB18BD1B4DD331DC26EF10E4912D01BE1BE10,
+};
+static const int32_t s_InvokerIndices[169] = 
+{
+	23,
+	23,
+	23,
+	26,
+	26,
+	23,
+	23,
+	1014,
+	23,
+	23,
+	23,
+	23,
+	1118,
+	23,
+	10,
+	23,
+	26,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	1430,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	32,
+	9,
+	26,
+	23,
+	23,
+	31,
+	26,
+	23,
+	10,
+	14,
+	14,
+	10,
+	102,
+	14,
+	26,
+	26,
+	23,
+	23,
+	32,
+	23,
+	23,
+	32,
+	32,
+	23,
+	23,
+	26,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	31,
+	23,
+	23,
+	276,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	26,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	26,
+	26,
+	23,
+	26,
+	756,
+	23,
+	10,
+	26,
+	26,
+	23,
+	26,
+	31,
+	382,
+	30,
+	30,
+	23,
+	23,
+	30,
+	23,
+	23,
+	26,
+	23,
+	23,
+	23,
+	14,
+	102,
+	14,
+	23,
+	23,
+	23,
+	23,
+	23,
+	26,
+	23,
+	23,
+	23,
+	31,
+	30,
+	30,
+	23,
+	23,
+	1359,
+	23,
+	23,
+	26,
+	23,
+	32,
+	23,
+	157,
+	26,
+	26,
+	23,
+	23,
+	23,
+	31,
+	14,
+	23,
+	23,
+	23,
+	23,
+	32,
+	23,
+	23,
+	26,
+	98,
+	98,
+	98,
+	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	3,
+	23,
+	9,
+	3,
+	23,
+	9,
+	32,
+	23,
+	102,
+	14,
+	23,
+	14,
+};
+extern const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule = 
+{
+	"Assembly-CSharp.dll",
+	169,
+	s_methodPointers,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+};

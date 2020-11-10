@@ -11,11 +11,15 @@ public class Spawner : ObjectPool
    [SerializeField] private List<GameObject> _prefabs;
    [SerializeField] private GameObject _spawnPointsContainer;
    [SerializeField] private List<Transform> _spawnPoints;
-   
+
+   private CameraMover _cameraMover;
    private int _currentPoint;
 
    private void Start()
    {
+      _cameraMover = FindObjectOfType<CameraMover>();
+      _cameraMover.AddPool(this);
+      
       GetSpawnPoints();
       
       foreach (var prefab in _prefabs)

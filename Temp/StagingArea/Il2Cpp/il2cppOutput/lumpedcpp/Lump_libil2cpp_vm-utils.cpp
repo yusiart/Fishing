@@ -1,0 +1,6 @@
+#include "il2cpp-config.h"
+#include "/Users/yuravishnyakov/Games/2019.4.6f1/Unity.app/Contents/il2cpp/libil2cpp/vm-utils/BlobReader.cpp"
+#include "/Users/yuravishnyakov/Games/2019.4.6f1/Unity.app/Contents/il2cpp/libil2cpp/vm-utils/Debugger.cpp"
+#include "/Users/yuravishnyakov/Games/2019.4.6f1/Unity.app/Contents/il2cpp/libil2cpp/vm-utils/NativeDelegateMethodCache.cpp"
+#include "/Users/yuravishnyakov/Games/2019.4.6f1/Unity.app/Contents/il2cpp/libil2cpp/vm-utils/NativeSymbol.cpp"
+#include "/Users/yuravishnyakov/Games/2019.4.6f1/Unity.app/Contents/il2cpp/libil2cpp/vm-utils/VmStringUtils.cpp"
