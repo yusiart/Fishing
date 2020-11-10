@@ -12,7 +12,7 @@ public class Rod : MonoBehaviour
     [SerializeField] private List<Image> _images;
 
     private CameraMover _camera;
-    private float _depth = -70;
+    private float _depth = -30;
     private Hook _currentHook;
     private bool _isShooting;
     private int _capacity = 5;

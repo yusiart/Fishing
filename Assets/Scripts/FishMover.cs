@@ -16,16 +16,18 @@ public class FishMover : MonoBehaviour
   private Quaternion _startTransform;
   private Vector2 _direction;
   private readonly float _axialMovement = 40f;
+  private BoxCollider2D _boxCollider;
 
   private void OnEnable()
   {
     SetStartSettings();
   }
 
-  private void Start()
+  private void Awake()
   {
     _speed += Random.Range(0.2f, 1f);
     _rangeSpread += Random.Range(3, 6);
+    _boxCollider = GetComponent<BoxCollider2D>();
   }
 
   private void Update()
@@ -40,6 +42,7 @@ public class FishMover : MonoBehaviour
     _isRightSide = true;
     _isItCatched = false;
     _direction = new Vector2(_axialMovement, transform.position.y);
+    _boxCollider.enabled = true;
   }
 
   private void Move()
@@ -72,5 +75,6 @@ public class FishMover : MonoBehaviour
   {
     transform.Rotate(0, 0, 90);
     _isItCatched = true;
+    _boxCollider.enabled = false;
   }
 }

@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _container: {fileID: 7022926535870808985}
-  _capacity: 6
+  _capacity: 8
   pool: []
   _prefabs: []
   _spawnPointsContainer: {fileID: 7022926535664432101}
